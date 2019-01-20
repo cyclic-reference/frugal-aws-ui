@@ -1,0 +1,526 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="shortcut icon" href="https://acari.io/reach.ico">
+    <title>Frugal AWS</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <h1>The Frugal AWS Developer</h1>
+            <h4>How to go to production on a budget</h4>
+            <p>
+                <small>Presented by <a href="http://acari.io" target="_blank">Alex Simons</a></small>
+            </p>
+        </section>
+
+        <section>
+            <h2>What's in it for you?</h2>
+            <p class="fragment fade-up">Mimic a production like environment locally.</p>
+            <p class="fragment fade-up">Deploy production systems <span style="font-style: italic">without</span>
+                OpenShift.</p>
+            <p class="fragment fade-up">Basic working knowledge AWS and some DevOps techniques.</p>
+            <p class="fragment fade-up">Minimize the amount of costs you will be responsible to pay.</p>
+        </section>
+
+        <section>
+            <section>
+                <h2>What is Production like?</h2>
+                <p class="fragment fade-up">It's great, you should try it sometime!</p>
+                <p class="fragment fade-up">Good production environments have these traits:</p>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h2>Secure Network Traffic</h2>
+                <p class="fragment fade-up">The application is accessible from HTTPS.</p>
+                <div class="fragment fade-up">
+                    <p>Any HTTP URL is redirected to HTTPS.</p>
+                    <small>eg <strong>http://google.com</strong> becomes <strong>https://google.com</strong></small>
+                </div>
+            </section>
+            <section>
+                <div>
+                    <p>SSL Certificates are <strong>Valid</strong> and <strong>Trusted</strong>. </p>
+                    <img src="images/secure_site.png" alt="secure site"/>
+                </div>
+                <p class="fragment">Now for somethings you do not want </p>
+            </section>
+            <section>
+                <h2>Just HTTP</h2>
+                <div>
+                    <img src="images/http.png" alt="insecure site"/>
+                    <br/>
+                    <h1>._.</h1>
+                </div>
+            </section>
+            <section>
+                <h2>Invalid Certificates 😱</h2>
+                <div>
+                    <img src="images/bad-https.png" alt="invalid https site"/><br/>
+                    <small>The could be expired or for the incorrect domain</small>
+                    <br/>
+                    <strong>You Really do not want this either!</strong><br/>
+                    <p class="fade-up fragment">
+                        I'll cover to avoid both of these at <strong>no monetary cost</strong> to you!
+                    </p>
+                </div>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h2>Next Production Trait</h2>
+                <br/>
+                <h3 class="fragment  fade-up">Sub-Domain Support</h3>
+                <div class="fragment fade-up">
+                    <p>Things like <strong>google.com</strong> are the main domain</p>
+                    <small>While there are also other sites tied under the same domain</small>
+                    <small>Such as <strong>docs.google.com</strong> and <strong>drive.google.com</strong></strong>
+                    </small>
+                </div>
+            </section>
+            <section>
+                <p style="font-size: 1.25em">https://google.com:3000/index.html</p>
+                <p class="fragment fade-up">Have you ever really done anything this before, like ever?</p>
+                <p class="fragment fade-up">
+                    Then why is it you always see things like these: <strong>localhost:3000</strong> or <strong>localhost:8080</strong>, when developing locally??
+                </p>
+            </section>
+            <section>
+                <h3>How do I not do this?</h3>
+                <p class="fade-up fragment">
+                    Well, if you already have this down then good for you!
+                </p>
+                <p class="fade-up fragment">
+                    However, if you do not know, most websites that run on <strong>HTTP</strong> default to port 80 (eg
+                    <strong>http://localhost:80</strong> and <strong>http://localhost</strong> are the same).
+                </p>
+                <p class="fade-up fragment">
+                    The same applies for <strong>HTTPS</strong> and port 443
+                </p>
+                <p class="fade-up fragment">
+                    I'll cover the whole port 3000 and 8080, in a bit.
+                </p>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h2>Next Prod Trait</h2>
+                <h3 class="fragment fade-up">Graceful error handling</h3>
+            </section>
+            <section>
+                <h2 class="title">No body likes this</h2>
+                <div>
+                    <img src="images/404_lame.png" alt="not-found"/>
+                    <br/></div>
+            </section>
+            <section>
+                <h2>Make it something fun!</h2>
+                <div>
+                    <img src="images/404.png" alt="not-found"/>
+                    <br/></div>
+            </section>
+            <section>
+                <h4>Be sure to address maintenance windows</h4>
+                <div>
+                    <img src="images/github-maintenance.png" alt="not-found"/>
+                    <br/></div>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h2>Next Prod Trait</h2>
+                <div class="fragment fade-up">
+                    <h3>Respond quickly</h3>
+                    <ul>
+                        <li class="fragment fade-up ">Succeed  Immediately</li>
+                        <li class="fragment fade-up ">Fail Fast</li>
+                    </ul>
+                </div>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h2>Last (but not final) trait of Prod</h2>
+                <h3 class="fragment fade-up">Path Support</h3>
+            </section>
+            <section>
+                <h3>What does this mean?</h3>
+                <div class="fragment fade-up">
+                    <p>If I were to put a url into the browser address then, I expect to take me to the content that I was viewing at the time.</p>
+                    <p class="fragment fade-up">If I put <br/>
+                        <a href="https://learn.acari.io/reactive/explanations/why" target="_blank">https://learn.acari.io/reactive/explanations/why</a>
+                        <br/>into my browser address, it better take me to the page that I was viewing when I copied that url.</p>
+                </div>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h2>So how do I do all of that stuff?</h2>
+                <div class="fragment fade-up">
+                    <img src="https://media.giphy.com/media/ujUdrdpX7Ok5W/giphy.gif" alt="magic">
+                </div>
+            </section>
+            <section>
+                <h2>How you really should start.</h2>
+                <ul>
+                    <li class="fragment fade-up">Organize all of your projects.</li>
+                    <li class="fragment fade-up">Install Docker on your local machine</li>
+                    <li class="fragment fade-up">Acquire AWS Account</li>
+                    <li class="fragment fade-up">Combine the above</li>
+                    <li class="fragment fade-up">Profit!</li>
+                </ul>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h2>Organize your projects</h2>
+                <p class="fragment fade-up">Group them by category</p>
+                <ul>
+                    <li class="fragment fade-up">Static Content</li>
+                    <li class="fragment fade-up">Web Services</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Static Content</h2>
+                <p class="fragment fade-up">Just a simple html based application that may or may not have a corresponding backend/REST API</p>
+            </section>
+            <section>
+                <h2>Web Services</h2>
+                <p class="fragment fade-up">Projects that run on/are servers and normally are accessed from <code>localhost:8080</code> or something like that.</p>
+                <p class="fragment fade-up">These may or may not serve static content as well</p>
+            </section>
+            <section>
+                <h2>The distinction between these two categories is the amount of $$ you will spend</h2>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h2>Enter Docker</h2>
+                <div class="fragment fade-up">
+                    <p>In the end, Docker is going to be doing most of the heavy lifting to prod</p>
+                    <img src="https://www.docker.com/sites/default/files/social/docker_facebook_share.png" alt="docker">
+                </div>
+            </section>
+            <section>
+                <h2>Things Docker will do for us</h2>
+                <ul>
+                    <li class="fragment fade-up">Service Provider</li>
+                    <li class="fragment fade-up">Secure Network Communication</li>
+                    <li class="fragment fade-up">Uniform Platform Provider</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Service Provision</h2>
+                <p class="fade-up fragment">
+                    Easily provides things like: Databases, Message Queues, Content Servers.
+                    <br/>Which support our Web Services
+                </p>
+                <p class="fade-up fragment">All <strong>without</strong> having to install any other software</p>
+                <p class="fade-up fragment">Once it works on your machine, then it works in production (provided your compute instance has Docker and made minor tweaks)</p>
+            </section>
+            <section>
+                <h2>Secure Network Communications</h2>
+                <p class="fade-up fragment">
+                    All services communicate, on their own special network, with each other.  
+                </p>
+                <p class="fade-up fragment">
+                    So there is not much need to maintain SSL between Docker processes
+                    <img src="https://tr1.cbsistatic.com/hub/i/r/2017/04/06/6f6fb9b1-b297-464d-a0e0-48b366745fe2/resize/770x/e75cd06318a179e5041993a6a8034df6/dockersechero.jpg" alt="docker">
+                </p>
+            </section>
+            <section>
+                <h2>Uniform Platform Provider</h2>
+                <p class="fade-up fragment">
+                    I can develop on a MacBook and deploy to prod on a Linux server and it will all work the same.
+                </p>
+                <div class="fade-up fragment">
+                    <p>Docker is supported on most major Operating Systems</p>
+                    <ul>
+                        <li class="fragment fade-up">Mac Hardware 2010 or newer</li>
+                        <li class="fragment fade-up">Windows 10 Pro</li>
+                        <li class="fragment fade-up">Ubuntu</li>
+                        <li class="fragment fade-up">Centos</li>
+                        <li class="fragment fade-up">RHEL/SLES (Enterpise Linuxes)</li>
+                    </ul>
+                </div>
+            </section>
+        </section>
+
+        <section>
+            <h2>Strategy</h2>
+            <p class="fragment fade-up">Establish Local Architecture</p>
+            <p class="fragment fade-up">Execute Local Architecture</p>
+            <p class="fragment fade-up">Establish AWS Architecture</p>
+            <p class="fragment fade-up">Execute AWS Architecture</p>
+        </section>
+
+        <section>
+            <h2>Local Strategy</h2>
+            <img src="images/LOCAL_ARCH.png" alt="local architecture">
+        </section>
+
+        <section>
+            <section>
+                <h2>Local Execution</h2>
+                <div class="fragment fade-up">
+                    <p>There will be a total of 3 websites</p>
+                    <p class="fragment fade-up">A React Web Application</p>
+                    <p class="fragment fade-up">A Spring Boot Application</p>
+                    <p class="fragment fade-up">A Express Application</p>
+                </div>
+            </section>
+            <section>
+                <h2>Entry point</h2>
+                <p class="fade-up fragment">
+                    The entry point to all of our application will be the NGINX server
+                </p>
+                <p class="fade-up fragment">
+                    All Client-Side communications will be in HTTPS
+                </p>
+            </section>
+            <section>
+                <h2>What is NGINX?</h2>
+                <p class="fragment fade-up">NGINX is open source software for serveing static content, proxying requests, and more things.</p>
+                <p class="fragment fade-up">Static content and proxying are just the ones focused on right now.</p>
+            </section>
+            <section>
+                <h2>NGINX Configuration</h2>
+                <p class="fade-up fragment">
+                    Self-Signed certificates can be used for the initial HTTPS set up.
+                    Which will later be replaced by free, trusted <a href="https://github.com/certbot/certbot/tree/master/certbot-dns-route53" target="_blank">Let's Encrypt</a> certificates.
+                </p>
+                <p class="fade-up fragment">
+                    The use of Host-Headers will allow NGINX to proxy requests based off of the domain supplied.
+                    Allowing for a single server to handle requests for many domains.
+                </p>
+            </section>
+            <section>
+                <h2>NGINX Configuration Cont.</h2>
+                <p class="fade-up fragment">
+                    The server will also handle all graceful failure pages that the user may see while interacting with your domain.
+                </p>
+            </section>
+            <section>
+                <h2>The React Application</h2>
+                <p class="fade-up fragment">Will be accessible from https://static-site.localhost</p>
+                <p class="fade-up fragment">The static content will be served by the NGINX server</p>
+            </section>
+            <section>
+                <h2>The Spring Application</h2>
+                <p class="fade-up fragment">Will be accessible from https://compute-app-one.localhost</p>
+                <p class="fade-up fragment">The static content will be served by the Spring Boot app via the NGINX proxy server.</p>
+                <p class="fade-up fragment">The NGINX server will access the spring boot server via the Docker supplied host name: <strong>compute-app-one</strong></p>
+            </section>
+            <section>
+                <h2>The Express Application</h2>
+                <p class="fade-up fragment">Will be accessible from https://compute-app-two.localhost</p>
+                <p class="fade-up fragment">The static content will be served by the Express app via the NGINX proxy server.</p>
+                <p class="fade-up fragment">The NGINX server will access the spring boot server via the Docker supplied host name: <strong>compute-app-two</strong></p>
+            </section>
+        </section>
+
+        <section>
+            <h1>Local Execution</h1>
+            <img src="images/LOCAL_ARCH.png" alt="local architecture">
+        </section>
+
+        <section>
+            <h2>AWS Strategy</h2>
+            <img src="images/AWS_ARCH.png" alt="cloud architecture">
+        </section>
+
+        <section>
+            <section>
+                <h2>AWS Execution</h2>
+                <div class="fragment fade-up">
+                    <p>There will be a total of 3 websites</p>
+                    <p class="fragment fade-up">A React Web Application</p>
+                    <p class="fragment fade-up">A Spring Boot Application</p>
+                    <p class="fragment fade-up">A Express Application</p>
+                </div>
+            </section>
+            <section>
+                <h2>Entry point</h2>
+                <p class="fade-up fragment">
+                    The entry point to all of our applications will be the Route 53 Service
+                </p>
+                <p class="fade-up fragment">
+                    All Client-Side communications will remain in HTTPS
+                </p>
+            </section>
+            <section>
+                <h2>Route 53</h2>
+                <p class="fragment fade-up">
+                    This service is responsible for routing all of your network traffic across your hosted zone
+                    such as <code>example.com</code>
+                </p>
+                <p class="fragment fade-up">
+                    This service will cost you $0.50 a month to run a hosted zone.
+                    Plus a annual cost for domain renewal, which depends on what you choose ($12.00 a year for .com)
+                </p>
+            </section>
+            <section>
+                <h2>EC2</h2>
+                <p class="fragment fade-up">
+                    Elastic Cloud Compute for our servers, this service will run our compute apps and NGINX.
+                    While Elastic Block Store (EBS) will save our instances data to a file system.
+                </p>
+                <p class="fragment fade-up">
+                    Super easy instance setup for Docker CE can be found <a href="https://docs.docker.com/docker-for-aws/" target="_blank">here.</a>
+                </p>
+            </section>
+            <section>
+                <h2>EC2 Continued</h2>
+                <p class="fragment fade-up">
+                    EC2 is the most expensive service you will be interacting with.
+                </p>
+                <p class="fragment fade-up">
+                    It cost under $10 a month for a single micro instance to run.
+                    You will also pay just under $3.00 for CloudWatch (which is a logging service).
+                </p>
+            </section>
+            <section>
+                <h2>NGINX Configuration</h2>
+                <p class="fade-up fragment">
+                    HTTPS Certificates will be the free, trusted <a href="https://github.com/certbot/certbot/tree/master/certbot-dns-route53" target="_blank">Let's Encrypt</a> certificates created to your hosted zone.
+                    Provided by the CertBot "Route-53 verification plugin".
+                </p>
+                <p class="fade-up fragment">
+                    The use of Host-Headers will allow NGINX to proxy requests based off of the domain supplied to the corresponding service.
+                </p>
+                <p class="fade-up fragment">
+                    The host headers will have to be different now that it will be running under an actual domain.
+                    So <strong>https://compute-app-one.localhost</strong> will turn into <strong>https://compute-app-one.sample-domain.com</strong>
+                </p>
+            </section>
+            <section>
+                <h2>NGINX Configuration Cont.</h2>
+                <p class="fade-up fragment">
+                    The most easy way to get your Let's Encrypt Certificates will be by running the <strong>certbot</strong> on your local machine.
+                </p>
+                <p class="fade-up fragment">
+                    This will require the AWS cli and access credentials to your account to be set up.
+                </p>
+                <p class="fade-up fragment">
+                    This will require also require for you to have Private Docker Image Repositories.
+                    Which will run you $7.00 a month and gives you 6 Private Repositories.
+                    Or you could just go Hardcore mode and get your certs on your EC2 instance via SCP and build your image locally.
+                </p>
+            </section>
+            <section>
+                <h2>The Spring Application</h2>
+                <h2>The Express Application</h2>
+                <p class="fade-up fragment">Will remain the same as the local setup</p>
+            </section>
+            <section>
+                <h2>The React Application</h2>
+                <p class="fade-up fragment">Be served by CloudFront</p>
+                <p class="fade-up fragment">Certificates will be provided by the Certificate Manager at no charge to you!</p>
+            </section>
+            <section>
+                <h2>Cloud Front</h2>
+                <p class="fade-up fragment">Is basically a CDN for your static content</p>
+                <p class="fade-up fragment">All of your content will be put on servers closer to your users, so faster response times!</p>
+            </section>
+            <section>
+                <h2>Cloud Front Continued</h2>
+                <p class="fade-up fragment">CloudFront will be fed by S3, which is just a remote file system.</p>
+                <p class="fade-up fragment">Since CloudFront caches your static content. Whenever you want to release new code you have to invalidate those caches.
+                This could cost you upwards of $0.1 a month, though I have never exceeded $0.02.
+                </p>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h2>AWS Cost Breakdown</h2>
+                <ul>
+                    <li class="fragment fade-up">Route 53: $1.50/month</li>
+                    <li class="fragment fade-up">EC2: $0/month</li>
+                    <li class="fragment fade-up">EBS: $0/month</li>
+                    <li class="fragment fade-up">CloudWatch: $0/month</li>
+                    <li class="fragment fade-up">Certificate Manager: $0/month</li>
+                    <li class="fragment fade-up">CloudFront: $0.10/month</li>
+                    <li class="fragment fade-up">S3: $0.0/month</li>
+                </ul>
+            </section>
+            <section data-background="http://i.giphy.com/90F8aUepslB84.gif">
+                <h2 style="color: white; text-shadow: 3px 0 0 #000, 0 -3px 0 #000, 0 3px 0 #000, -3px 0 0 #000;">Free AWS Services for a Year!</h2>
+            </section>
+            <section>
+                <h2>For the Extremely motivated</h2>
+                <p class="fade-up fragment">You can support your own prod for about $2.00 a month</p>
+                <p class="fade-up fragment">After a year you are looking at about $15 a month</p>
+            </section>
+        </section>
+
+        <section>
+            <h2>Recap</h2>
+            <p class="fragment fade-up">How to mimic a production like environment locally.</p>
+            <p class="fragment fade-up">How to deploy production systems <span style="font-style: italic">without</span>
+                OpenShift.</p>
+            <p class="fragment fade-up">Get basic working knowledge AWS and some DevOps techniques.</p>
+            <p class="fragment fade-up">How to minimize the amount of costs you will be responsible to pay.</p>
+        </section>
+
+        <section style="text-align: left;">
+            <h1>THE END</h1>
+            <p>
+                - <a href="https://github.com/cyclic-reference/acari-api" target="_blank">To see my production setup.</a> <br>
+                - <a href="https://github.com/cyclic-reference/frugal-aws" target="_blank">Source code from this presentation</a>
+            </p>
+        </section>
+    </div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+        history: true,
+        dependencies: [
+            {src: 'plugin/markdown/marked.js'},
+            {src: 'plugin/markdown/markdown.js'},
+            {src: 'plugin/notes/notes.js', async: true},
+            {
+                src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                    hljs.initHighlightingOnLoad();
+                }
+            }
+        ]
+    });
+</script>
+</body>
+</html>
