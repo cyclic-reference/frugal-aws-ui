@@ -1,0 +1,9 @@
+When does the AWS free usage tier expire?
+The AWS free usage tier will expire 12 months from the date you sign up. When your free usage expires or if your application use exceeds the free usage tiers, you simply pay standard, pay-as-you-go service rates (see each service page for full pricing details). Restrictions apply; see offer terms for more details.
+Amazon Simple Workflow Service, Amazon DynamoDB, Amazon SimpleDB, Amazon Simple Notification Service, and Amazon Simple Queue Service free tiers are available to both existing and new AWS customers indefinitely.
+
+
+---
+certs
+-https://github.com/certbot/certbot/tree/master/certbot-dns-route53
+-https://certbot-dns-route53.readthedocs.io/en/stable/

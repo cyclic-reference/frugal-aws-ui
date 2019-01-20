@@ -1,0 +1,22 @@
+Create sample projects
+    - Compute app one
+    - Compute app two
+    - Static Site
+    - Edge Service
+
+Create SSL connections
+    - First self signed
+    - Then lets encrypt
+
+AWS Services
+    - S3 static hosting
+    - Cloud Front
+    - EC2
+    - Route 53
+    - Certificate Manager
+
+Create Diagram
+    - Local Setup
+    - AWS Setup
+
+Slides
