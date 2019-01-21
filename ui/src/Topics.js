@@ -12,9 +12,9 @@ import vertx from './images/Vert.x_Logo.svg'
 import pen from './images/pen.svg'
 import A from './images/A.svg';
 
-const projects = [
+const topics = [
   {
-    title: 'Learn Functional Programming',
+    title: 'What is Production?',
     exerpt: 'Are you curious about functional programming? If so this is a great place to start your declarative journey!',
     reach: reach_purple,
     color: purple[500],
@@ -29,7 +29,7 @@ const projects = [
     ],
   },
   {
-    title: 'Resilient Applications',
+    title: 'Where do I start?',
     exerpt:
       'Applications today need to be able to respond in the face of adverse conditions. The circuit breaker pattern is a great place to start.',
     reach: reach_blue,
@@ -47,7 +47,7 @@ const projects = [
     ],
   },
   {
-    title: 'Reactive Applications',
+    title: 'How do I start?',
     exerpt:
       'Who does not like doing more with less? Especially when you have to pay for AWS EC2 usage hours!',
     reach: reach_green,
@@ -64,7 +64,7 @@ const projects = [
   ],
   },
   {
-    title: 'Acari Blog',
+    title: 'How Do I go tor Production?',
     exerpt:
       'There are a lot of problems that exist and cannot be solved by a simple google search alone!',
     reach: reach_purple,
@@ -81,7 +81,7 @@ const projects = [
     ],
   },
   {
-    title: 'Acari Cyberspace',
+    title: 'How much is Production?',
     exerpt:'I am always learning, whether it is about a new tool, framework, paradigm or something else exciting. ',
     reach: reach_red,
     color: red[500],
@@ -93,10 +93,10 @@ const projects = [
     },
     descriptions: [
       'If you are reading this, then you are already checking this project out. ',
-      'I needed a way to showcase all of the projects that spawn from my explorations.',
+      'I needed a way to showcase all of the topics that spawn from my explorations.',
       'Fun fact, all of my logos at the bottom of each project all lead to this site!',
     ],
   },
 ]
 
-export default projects;
+export default topics;

@@ -56,7 +56,7 @@ const styles = theme => ({
   },
 });
 
-class ProjectCard extends React.Component {
+class TopicCard extends React.Component {
   state = {expanded: false};
 
   handleExpandClick = () => {
@@ -64,28 +64,28 @@ class ProjectCard extends React.Component {
   };
 
   render() {
-    const {classes, project} = this.props;
+    const {classes, topic} = this.props;
     return (
       <Card className={classes.card}>
         <CardContent>
           <Typography gutterBottom variant='h4' color='inherit' component='h2'>
-            {project.title}
+            {topic.title}
           </Typography>
           <GridList cellHeight={'auto'}>
             <div>
               <Typography aria-multiline={true} component='p' color='inherit'>
-                {project.exerpt}
+                {topic.exerpt}
               </Typography>
             </div>
               <CardMedia
                 className={classes.media}
-                image={project.displayImage}
-                title={project.title}
+                image={topic.displayImage}
+                title={topic.title}
               />
           </GridList>
         </CardContent>
         <CardActions className={classes.actions} disableActionSpacing>
-          <SocialShare sharingUrl={project.link.href} project={project}>
+          <SocialShare sharingUrl={topic.link.href} topic={topic}>
             <IconButton aria-label='Share' color={'inherit'}>
               <ShareIcon/>
             </IconButton>
@@ -96,7 +96,7 @@ class ProjectCard extends React.Component {
                      className={classes.avatar}
 
                      sizes={'100%'}
-                     src={project.reach}/>
+                     src={topic.reach}/>
           </div>
           <IconButton
             className={classnames(classes.expand, {
@@ -113,21 +113,21 @@ class ProjectCard extends React.Component {
         <Collapse in={this.state.expanded} timeout='auto' unmountOnExit>
           <CardContent>
             {
-              project.descriptions.map((description, index) => (
+              topic.descriptions.map((description, index) => (
                 <Typography key={index}
                             color={'inherit'}
                             paragraph>{description}</Typography>
               ))
             }
           </CardContent>
-          { !project.link.hideButton &&
+          { !topic.link.hideButton &&
           (<CardActions>
-            <Button href={project.link.href}
+            <Button href={topic.link.href}
                     target={'_blank'}
                     variant={"contained"}
                     size='medium'
                     color='default'>
-              {project.link.linkText}
+              {topic.link.linkText}
             </Button>
           </CardActions>)
           }
@@ -137,8 +137,8 @@ class ProjectCard extends React.Component {
   }
 }
 
-ProjectCard.propTypes = {
+TopicCard.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(ProjectCard);
+export default withStyles(styles)(TopicCard);

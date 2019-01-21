@@ -1,18 +1,18 @@
 import React from 'react';
 import JumboTron from "./JumboTron";
 import Grid from "@material-ui/core/Grid";
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "./TopicCard";
 
 function Landing(props) {
-  const {classes, Projects} = props;
+  const {classes, Topics} = props;
   return (
     <div className={classes.layout}>
       <main>
         <JumboTron/>
         <Grid container spacing={40}>
-          {Projects.map(project => (
-            <Grid item key={project.title} xs={12} md={6}>
-              <ProjectCard project={project}></ProjectCard>
+          {Topics.map(topic => (
+            <Grid item key={topic.title} xs={12} md={6}>
+              <ProjectCard topic={topic}></ProjectCard>
             </Grid>
           ))}
         </Grid>

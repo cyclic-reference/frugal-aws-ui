@@ -8,7 +8,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Footer from "./components/Footer";
 import AppBar from "@material-ui/core/es/AppBar/AppBar";
-import Projects from './Projects';
+import Topics from './Topics';
 import Fab from "@material-ui/core/es/Fab/Fab";
 import EmailIcon from '@material-ui/icons/Email'
 import red from '@material-ui/core/colors/red'
@@ -110,7 +110,7 @@ const App = props => {
               </Toolbar>
             </AppBar>
             <Switch>
-              <Route path={'/'} exact component={() => <Landing classes={classes} Projects={Projects}/>}/>
+              <Route path={'/'} exact component={() => <Landing classes={classes} Topics={Topics}/>}/>
               <Route component={() => <div>
                 <div className={classes.shrugContainer}>
                   <img

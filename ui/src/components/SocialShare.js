@@ -40,7 +40,7 @@ class SocialShare extends React.Component {
   };
 
   render() {
-    const { children, sharingUrl, project } = this.props;
+    const { children, sharingUrl, topic } = this.props;
     const { anchorEl, open } = this.state;
     const id = open ? 'simple-popper' : null;
 
@@ -54,35 +54,35 @@ class SocialShare extends React.Component {
             <Fade {...TransitionProps} timeout={350}>
               <Paper style={{display: 'flex', cursor: 'pointer'}} onClick={()=>this.setState({open: false})}>
                 <TwitterShareButton
-                  title={project.title + '. ' + project.exerpt}
+                  title={topic.title + '. ' + topic.exerpt}
                   url={sharingUrl}>
                   <TwitterIcon size={48}></TwitterIcon>
                 </TwitterShareButton>
                 <LinkedinShareButton
-                  title={project.title}
-                  description={project.exerpt}
+                  title={topic.title}
+                  description={topic.exerpt}
                   url={sharingUrl}>
                   <LinkedinIcon size={48}></LinkedinIcon>
                 </LinkedinShareButton>
                 <FacebookShareButton
-                  title={project.title}
-                  quote={project.exerpt}
+                  title={topic.title}
+                  quote={topic.exerpt}
                   url={sharingUrl}>
                   <FacebookIcon size={48}></FacebookIcon>
                 </FacebookShareButton>
                 <RedditShareButton
-                  title={project.title}
+                  title={topic.title}
                   url={sharingUrl}>
                   <RedditIcon size={48}></RedditIcon>
                 </RedditShareButton>
                 <EmailShareButton
-                  subject={project.title}
-                  body={project.exerpt}
+                  subject={topic.title}
+                  body={topic.exerpt}
                   url={sharingUrl}>
                   <EmailIcon size={48}></EmailIcon>
                 </EmailShareButton>
                 <GooglePlusShareButton
-                  title={project.title}
+                  title={topic.title}
                   url={sharingUrl}>
                   <GooglePlusIcon size={48}></GooglePlusIcon>
                 </GooglePlusShareButton>
