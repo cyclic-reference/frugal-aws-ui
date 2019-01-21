@@ -14,8 +14,7 @@ import EmailIcon from '@material-ui/icons/Email'
 import red from '@material-ui/core/colors/red'
 import orange from '@material-ui/core/colors/orange'
 import Landing from "./components/Landing";
-import IconButton from "@material-ui/core/IconButton";
-import Menu from "@material-ui/icons/Menu";
+import MenuNavigation from "./components/MenuNavigation";
 
 const styles = theme => ({
   layout: {
@@ -57,14 +56,6 @@ const styles = theme => ({
     bottom: theme.spacing.unit * 2,
     right: theme.spacing.unit * 2,
   },
-  menuButton: {
-    color: theme.palette.grey[900],
-    marginLeft: -12,
-    marginRight: 20,
-  },
-  grow: {
-    flexGrow: 1,
-  },
 });
 
 const theme = createMuiTheme({
@@ -86,9 +77,7 @@ const App = props => {
           <div className={"backdrop"}>
             <AppBar position={"sticky"} className={classes.header}>
               <Toolbar>
-                <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
-                  <Menu />
-                </IconButton>
+                <MenuNavigation/>
                 <Typography
                   component="h2"
                   variant="h5"
