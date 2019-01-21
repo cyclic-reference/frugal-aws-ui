@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
+import {withStyles} from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
@@ -12,7 +12,7 @@ import MailIcon from '@material-ui/icons/Mail';
 import Menu from "@material-ui/icons/Menu";
 import IconButton from "@material-ui/core/IconButton";
 
-const styles = theme =>({
+const styles = theme => ({
   list: {
     width: 250,
   },
@@ -42,27 +42,19 @@ class MenuNavigation extends React.Component {
   };
 
   render() {
-    const { classes } = this.props;
+    const {classes, topics} = this.props;
 
     const fullList = (
       <div className={classes.fullList}>
         <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
+          {topics.map((text, index) => (
+            <ListItem button key={text.title}>
+              <ListItemIcon>{index % 2 === 0 ? <InboxIcon/> : <MailIcon/>}</ListItemIcon>
+              <ListItemText primary={text.title}/>
             </ListItem>
           ))}
         </List>
-        <Divider />
-        <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
+        <Divider/>
       </div>
     );
 
@@ -71,7 +63,7 @@ class MenuNavigation extends React.Component {
         <IconButton
           onClick={this.toggleDrawer(true)}
           className={classes.menuButton} aria-label="Menu">
-          <Menu />
+          <Menu/>
         </IconButton>
         <Drawer anchor="top" open={this.state.drawerOpen} onClose={this.toggleDrawer(false)}>
           <div
@@ -90,6 +82,7 @@ class MenuNavigation extends React.Component {
 
 MenuNavigation.propTypes = {
   classes: PropTypes.object.isRequired,
+  topics: PropTypes.array.isRequired,
 };
 
 export default withStyles(styles)(MenuNavigation);

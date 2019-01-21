@@ -96,7 +96,7 @@ const App = props => {
           <div className={"backdrop"}>
             <AppBar position={"sticky"} className={classes.header}>
               <Toolbar>
-                <MenuNavigation/>
+                <MenuNavigation topics={Topics}/>
                 <Typography
                   component="h2"
                   variant="h5"
