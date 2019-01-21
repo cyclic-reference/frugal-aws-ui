@@ -6,7 +6,7 @@ import red from "@material-ui/core/es/colors/red";
 import hystrix from './images/hystrix.png';
 import GreenFlag from './images/GreenFlag.svg'
 import cloud from './images/cloud.svg'
-import A from './images/A.svg';
+import dogecoin from './images/dogecoin.svg';
 
 const topics = [
   {
@@ -47,7 +47,7 @@ const topics = [
     exerpt:'Money talks, throughout the previous section we discussed where we can optimize our costs while deploying to production. ' +
       'Here we recap what can be expected to pay while maintaining our production environment.',
     color: red[500],
-    displayImage: A,
+    displayImage: dogecoin,
     path: '/production',
   },
 ];
