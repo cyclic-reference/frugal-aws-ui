@@ -4,7 +4,7 @@ import blue from "@material-ui/core/es/colors/blue";
 import green from "@material-ui/core/es/colors/green";
 import red from "@material-ui/core/es/colors/red";
 import hystrix from './images/hystrix.png';
-import vertx from './images/Vert.x_Logo.svg'
+import vertx from './images/GreenFlag.svg'
 import pen from './images/pen.svg'
 import A from './images/A.svg';
 
@@ -44,7 +44,7 @@ const topics = [
   },
   {
     title: 'How much is Production?',
-    exerpt:'Money talks, through out the previous section we discussed where we can optimize our costs while deploying to production. ' +
+    exerpt:'Money talks, throughout the previous section we discussed where we can optimize our costs while deploying to production. ' +
       'Here we recap what can be expected to pay while maintaining our production environment.',
     color: red[500],
     displayImage: A,
