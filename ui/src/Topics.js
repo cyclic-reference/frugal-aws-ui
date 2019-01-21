@@ -64,7 +64,7 @@ const topics = [
   ],
   },
   {
-    title: 'How Do I go tor Production?',
+    title: 'How Do I go to Production?',
     exerpt:
       'There are a lot of problems that exist and cannot be solved by a simple google search alone!',
     reach: reach_purple,

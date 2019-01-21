@@ -11,8 +11,8 @@ function Landing(props) {
         <JumboTron/>
         <Grid container spacing={40}>
           {Topics.map(topic => (
-            <Grid item key={topic.title} xs={12} md={6}>
-              <ProjectCard topic={topic}></ProjectCard>
+            <Grid item key={topic.title} xs={12} md={12}>
+              <ProjectCard topic={topic}/>
             </Grid>
           ))}
         </Grid>
