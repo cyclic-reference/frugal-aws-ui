@@ -16,6 +16,8 @@ import GridList from '@material-ui/core/es/GridList/GridList';
 import Button from '@material-ui/core/es/Button/Button';
 import HexBottom from '../images/hex-bottom.png';
 import SocialShare from "./SocialShare";
+import withRouter from "react-router/es/withRouter";
+import {Link} from "react-router-dom";
 
 
 const styles = theme => ({
@@ -85,41 +87,14 @@ class TopicCard extends React.Component {
           </GridList>
         </CardContent>
         <CardActions className={classes.actions} disableActionSpacing>
-          <div style={{width: '100%', display: 'flex'}}/>
-          <IconButton
-            className={classnames(classes.expand, {
-              [classes.expandOpen]: this.state.expanded,
-            })}
-            onClick={this.handleExpandClick}
-            color={'inherit'}
-            aria-expanded={this.state.expanded}
-            aria-label='Show more'
-          >
-            <ExpandMoreIcon/>
-          </IconButton>
-        </CardActions>
-        <Collapse in={this.state.expanded} timeout='auto' unmountOnExit>
-          <CardContent>
-            {
-              topic.descriptions.map((description, index) => (
-                <Typography key={index}
-                            color={'inherit'}
-                            paragraph>{description}</Typography>
-              ))
-            }
-          </CardContent>
-          { !topic.link.hideButton &&
-          (<CardActions>
-            <Button href={topic.link.href}
-                    target={'_blank'}
-                    variant={"contained"}
+          <Link to={topic.path} style={{textDecoration: 'none'}}>
+            <Button variant={"contained"}
                     size='medium'
                     color='default'>
-              {topic.link.linkText}
+              Read More
             </Button>
-          </CardActions>)
-          }
-        </Collapse>
+          </Link>
+        </CardActions>
       </Card>
     );
   }
@@ -129,4 +104,4 @@ TopicCard.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(TopicCard);
+export default withRouter(withStyles(styles)(TopicCard));
