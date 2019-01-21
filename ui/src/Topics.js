@@ -11,7 +11,7 @@ import A from './images/A.svg';
 const topics = [
   {
     title: 'What is Production?',
-    exerpt: 'Are you curious about functional programming? If so this is a great place to start your declarative journey!',
+    exerpt: 'This section will explain the positive traits that are exhibited by well established production environments.',
     color: purple[500],
     displayImage: lambda,
     path: '/production',
@@ -19,7 +19,7 @@ const topics = [
   {
     title: 'Where do I start?',
     exerpt:
-      'Who does not like doing more with less? Especially when you have to pay for AWS EC2 usage hours!',
+      'You now have a good fundamental understanding of what a "good" production environment looks like. The next step in your journey is laying out a strategy and figuring out starting place to begin your trip.',
     color: green[500],
     displayImage: vertx,
     path: '/production',
@@ -27,7 +27,8 @@ const topics = [
   {
     title: 'How do I develop locally?',
     exerpt:
-      'Applications today need to be able to respond in the face of adverse conditions. The circuit breaker pattern is a great place to start.',
+      'Theory and practice are two separate thing in my mind. Just knowing what needs to happen is half of the battle. ' +
+      'This section is devoted in showing how to start putting these block together.',
     color: blue[500],
     displayImage: hystrix,
     path: '/production',
@@ -35,14 +36,16 @@ const topics = [
   {
     title: 'How Do I go to Production?',
     exerpt:
-      'There are a lot of problems that exist and cannot be solved by a simple google search alone!',
+      'Thanks to good strategy, the fundamental concepts that helped us develop locally can also be applied to most of our production. ' +
+      'Here we will learn how to get our production into AWS while drawing on our past knowledge to guide us along.',
     color: purple[500],
     displayImage: pen,
     path: '/production',
   },
   {
     title: 'How much is Production?',
-    exerpt:'I am always learning, whether it is about a new tool, framework, paradigm or something else exciting. ',
+    exerpt:'Money talks, through out the previous section we discussed where we can optimize our costs while deploying to production. ' +
+      'Here we recap what can be expected to pay while maintaining our production environment.',
     color: red[500],
     displayImage: A,
     path: '/production',
