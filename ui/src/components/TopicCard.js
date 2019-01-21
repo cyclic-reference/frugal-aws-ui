@@ -85,11 +85,6 @@ class TopicCard extends React.Component {
           </GridList>
         </CardContent>
         <CardActions className={classes.actions} disableActionSpacing>
-          <SocialShare sharingUrl={topic.link.href} topic={topic}>
-            <IconButton aria-label='Share' color={'inherit'}>
-              <ShareIcon/>
-            </IconButton>
-          </SocialShare>
           <div style={{width: '100%', display: 'flex'}}/>
           <IconButton
             className={classnames(classes.expand, {
