@@ -1,9 +1,9 @@
-import lambda from './images/lambda.svg';
+import Question from './images/Question.svg';
 import purple from "@material-ui/core/es/colors/purple";
 import blue from "@material-ui/core/es/colors/blue";
 import green from "@material-ui/core/es/colors/green";
 import red from "@material-ui/core/es/colors/red";
-import hystrix from './images/hystrix.png';
+import build from './images/build.svg';
 import GreenFlag from './images/GreenFlag.svg'
 import cloud from './images/cloud.svg'
 import dogecoin from './images/dogecoin.svg';
@@ -13,7 +13,7 @@ const topics = [
     title: 'What is Production?',
     exerpt: 'This section will explain the positive traits that are exhibited by well established production environments.',
     color: purple[500],
-    displayImage: lambda,
+    displayImage: Question,
     path: '/production',
   },
   {
@@ -30,7 +30,7 @@ const topics = [
       'Theory and practice are two separate thing in my mind. Just knowing what needs to happen is half of the battle. ' +
       'This section is devoted in showing how to start putting these block together.',
     color: blue[500],
-    displayImage: hystrix,
+    displayImage: build,
     path: '/production',
   },
   {
