@@ -105,7 +105,7 @@ const App = props => {
                   noWrap
                   className={classes.toolbarTitle}
                 >
-                  &#10218;  Acari Cyberspace &#10219;
+                  Frugal AWS
                 </Typography>
               </Toolbar>
             </AppBar>

@@ -12,7 +12,7 @@ const styles = theme => ({
     flexWrap: 'wrap',
     padding: '1em',
   },
-  principle:{
+  principle: {
     paddingRight: '1em',
     marginBottom: '0.5em'
   },
@@ -30,19 +30,7 @@ const styles = theme => ({
   mainGrid: {
     marginTop: theme.spacing.unit * 3,
   },
-})
-
-
-const principles = [
-  'Continuous Improvement',
-  'Ownership',
-  'Bias for Action',
-  'Focus',
-  'Curiosity',
-  'Open-mindedness',
-  'Efficiency',
-  'Stability',
-];
+});
 
 const JumboTron = props => {
   const {classes} = props;
@@ -54,26 +42,18 @@ const JumboTron = props => {
           <Grid item md={6}>
             <div className={classes.mainFeaturedPostContent}>
               <Typography component="h1" variant="h3" color="inherit" gutterBottom>
-                Dedicate to being great.
+                The Frugal AWS Developer
               </Typography>
               <Typography variant="h5" color="inherit" paragraph>
-                Here is a rich collection of various projects that capture the principals that I have dedicated to
-                <span style={{fontStyle: 'italic'}}> my</span> passion.
+                How to go to production on a budget
               </Typography>
             </div>
           </Grid>
         </Grid>
-        <div variant="dense" className={classes.principles}>
-          {principles.map(principle => (
-            <div color="inherit" className={classes.principle} key={principle}>
-              &raquo; {principle}
-            </div>
-          ))}
-        </div>
       </div>
     </Paper>
   </React.Fragment>;
-}
+};
 
 JumboTron.propTypes = {
   classes: PropTypes.object.isRequired,
