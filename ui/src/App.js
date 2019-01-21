@@ -1,20 +1,18 @@
 import React from 'react';
 import './App.css';
 import PropTypes from 'prop-types';
-import {withStyles, MuiThemeProvider, createMuiTheme} from '@material-ui/core/styles';
+import {createMuiTheme, MuiThemeProvider, withStyles} from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
 import Footer from "./components/Footer";
-import JumboTron from "./components/JumboTron";
-import ProjectCard from "./components/ProjectCard";
 import AppBar from "@material-ui/core/es/AppBar/AppBar";
 import Projects from './Projects';
 import Fab from "@material-ui/core/es/Fab/Fab";
 import EmailIcon from '@material-ui/icons/Email'
 import red from '@material-ui/core/colors/red'
 import orange from '@material-ui/core/colors/orange'
+import Landing from "./components/Landing";
 
 const styles = theme => ({
   layout: {
@@ -64,7 +62,7 @@ const theme = createMuiTheme({
       main: orange[500],
     },
   },
-  typography: { useNextVariants: true },
+  typography: {useNextVariants: true},
 });
 
 const App = props => {
@@ -88,18 +86,7 @@ const App = props => {
               </Typography>
             </Toolbar>
           </AppBar>
-          <div className={classes.layout}>
-            <main>
-              <JumboTron/>
-              <Grid container spacing={40}>
-                {Projects.map(project => (
-                  <Grid item key={project.title} xs={12} md={6}>
-                    <ProjectCard project={project}></ProjectCard>
-                  </Grid>
-                ))}
-              </Grid>
-            </main>
-          </div>
+          <Landing classes={classes} Projects={Projects}/>
           <Fab href={'mailto:alexsimons9999@gmail.com?subject=Hey, Alex! Do you have time to talk?'}
                size={"large"}
                title={'You like sending emails, don\'t you?'}
