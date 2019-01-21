@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom';
 import './App.css';
 import PropTypes from 'prop-types';
 import {createMuiTheme, MuiThemeProvider, withStyles} from '@material-ui/core/styles';
@@ -15,6 +15,7 @@ import red from '@material-ui/core/colors/red'
 import orange from '@material-ui/core/colors/orange'
 import Landing from "./components/Landing";
 import MenuNavigation from "./components/MenuNavigation";
+import Shrug from './images/shrug_shadow.png';
 
 const styles = theme => ({
   layout: {
@@ -56,7 +57,25 @@ const styles = theme => ({
     bottom: theme.spacing.unit * 2,
     right: theme.spacing.unit * 2,
   },
+  shrugContainer: {
+    padding: '1em',
+    marginTop: '2em',
+    textAlign: 'center',
+    borderRadius: '5px',
+  },
+  goHomeContainer: {
+    color: '#EEEEEE',
+    backgroundColor: 'rgba(55,55,55,0.75)',
+    borderRadius: '5px',
+    textAlign: 'center',
+    margin: '32px auto',
+    padding: '48px',
+    maxWidth: '400px',
+    cursor: 'pointer',
+    boxShadow: '0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12)',
+  },
 });
+
 
 const theme = createMuiTheme({
   palette: {
@@ -90,8 +109,25 @@ const App = props => {
                 </Typography>
               </Toolbar>
             </AppBar>
-            <Route path={'/'} exact component={() => <Landing classes={classes} Projects={Projects}/>}/>
-            <Route component={() => <div>dunno</div>}/>
+            <Switch>
+              <Route path={'/'} exact component={() => <Landing classes={classes} Projects={Projects}/>}/>
+              <Route component={() => <div>
+                <div className={classes.shrugContainer}>
+                  <img
+                    src={Shrug}
+                    alt="¯\_(ツ)_/¯"/>
+                </div>
+                <Link to={'/'} style={{textDecoration: 'none'}}>
+                  <div className={classes.goHomeContainer}>
+                    <h1>Hmmm, I can't seem to find that...</h1>
+                    <div className="btn btn-primary">
+                      Go Home
+                    </div>
+                  </div>
+                </Link>
+              </div>
+              }/>
+            </Switch>
             <Fab href={'mailto:alexsimons9999@gmail.com?subject=Hey, Alex! Do you have time to talk?'}
                  size={"large"}
                  title={'You like sending emails, don\'t you?'}
