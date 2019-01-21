@@ -4,8 +4,8 @@ import blue from "@material-ui/core/es/colors/blue";
 import green from "@material-ui/core/es/colors/green";
 import red from "@material-ui/core/es/colors/red";
 import hystrix from './images/hystrix.png';
-import vertx from './images/GreenFlag.svg'
-import pen from './images/pen.svg'
+import GreenFlag from './images/GreenFlag.svg'
+import cloud from './images/cloud.svg'
 import A from './images/A.svg';
 
 const topics = [
@@ -21,7 +21,7 @@ const topics = [
     exerpt:
       'You now have a good fundamental understanding of what a "good" production environment looks like. The next step in your journey is laying out a strategy and figuring out starting place to begin your trip.',
     color: green[500],
-    displayImage: vertx,
+    displayImage: GreenFlag,
     path: '/production',
   },
   {
@@ -39,7 +39,7 @@ const topics = [
       'Thanks to good strategy, the fundamental concepts that helped us develop locally can also be applied to most of our production. ' +
       'Here we will learn how to get our production into AWS while drawing on our past knowledge to guide us along.',
     color: purple[500],
-    displayImage: pen,
+    displayImage: cloud,
     path: '/production',
   },
   {
