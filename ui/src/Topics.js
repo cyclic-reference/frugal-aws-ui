@@ -19,17 +19,17 @@ const topics = [
   {
     title: 'Where do I start?',
     exerpt:
-      'Applications today need to be able to respond in the face of adverse conditions. The circuit breaker pattern is a great place to start.',
-    color: blue[500],
-    displayImage: hystrix,
-    path: '/production',
-  },
-  {
-    title: 'How do I start?',
-    exerpt:
       'Who does not like doing more with less? Especially when you have to pay for AWS EC2 usage hours!',
     color: green[500],
     displayImage: vertx,
+    path: '/production',
+  },
+  {
+    title: 'How do I develop locally?',
+    exerpt:
+      'Applications today need to be able to respond in the face of adverse conditions. The circuit breaker pattern is a great place to start.',
+    color: blue[500],
+    displayImage: hystrix,
     path: '/production',
   },
   {
@@ -47,6 +47,6 @@ const topics = [
     displayImage: A,
     path: '/production',
   },
-]
+];
 
 export default topics;
