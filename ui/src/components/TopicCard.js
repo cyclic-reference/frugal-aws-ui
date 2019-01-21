@@ -37,6 +37,7 @@ const styles = theme => ({
     display: 'flex',
   },
   expand: {
+    background: theme.palette.grey[700] + '55',
     transform: 'rotate(0deg)',
     transition: theme.transitions.create('transform', {
       duration: theme.transitions.duration.shortest,
@@ -89,14 +90,7 @@ class TopicCard extends React.Component {
               <ShareIcon/>
             </IconButton>
           </SocialShare>
-          <div style={{width: '100%', display:'flex'}}>
-            <div style={{flexGrow: 0.5}}/>
-            <Avatar  aria-label='Reach'
-                     className={classes.avatar}
-
-                     sizes={'100%'}
-                     src={topic.reach}/>
-          </div>
+          <div style={{width: '100%', display: 'flex'}}/>
           <IconButton
             className={classnames(classes.expand, {
               [classes.expandOpen]: this.state.expanded,
