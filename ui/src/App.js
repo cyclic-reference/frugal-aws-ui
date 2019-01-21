@@ -1,4 +1,5 @@
 import React from 'react';
+import {BrowserRouter as Router} from 'react-router-dom';
 import './App.css';
 import PropTypes from 'prop-types';
 import {createMuiTheme, MuiThemeProvider, withStyles} from '@material-ui/core/styles';
@@ -71,30 +72,32 @@ const App = props => {
     <React.Fragment>
       <CssBaseline/>
       <MuiThemeProvider theme={theme}>
-        <div className={"backdrop"}>
-          <AppBar position={"sticky"} className={classes.header}>
-            <Toolbar>
-              <Typography
-                component="h2"
-                variant="h5"
-                color="inherit"
-                align="center"
-                noWrap
-                className={classes.toolbarTitle}
-              >
-                &#10218;  Acari Cyberspace &#10219;
-              </Typography>
-            </Toolbar>
-          </AppBar>
-          <Landing classes={classes} Projects={Projects}/>
-          <Fab href={'mailto:alexsimons9999@gmail.com?subject=Hey, Alex! Do you have time to talk?'}
-               size={"large"}
-               title={'You like sending emails, don\'t you?'}
-               className={classes.fab}>
-            <EmailIcon/>
-          </Fab>
-          <Footer/>
-        </div>
+        <Router>
+          <div className={"backdrop"}>
+            <AppBar position={"sticky"} className={classes.header}>
+              <Toolbar>
+                <Typography
+                  component="h2"
+                  variant="h5"
+                  color="inherit"
+                  align="center"
+                  noWrap
+                  className={classes.toolbarTitle}
+                >
+                  &#10218;  Acari Cyberspace &#10219;
+                </Typography>
+              </Toolbar>
+            </AppBar>
+            <Landing classes={classes} Projects={Projects}/>
+            <Fab href={'mailto:alexsimons9999@gmail.com?subject=Hey, Alex! Do you have time to talk?'}
+                 size={"large"}
+                 title={'You like sending emails, don\'t you?'}
+                 className={classes.fab}>
+              <EmailIcon/>
+            </Fab>
+            <Footer/>
+          </div>
+        </Router>
       </MuiThemeProvider>
     </React.Fragment>
   );
