@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router} from 'react-router-dom';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 import './App.css';
 import PropTypes from 'prop-types';
 import {createMuiTheme, MuiThemeProvider, withStyles} from '@material-ui/core/styles';
@@ -90,7 +90,8 @@ const App = props => {
                 </Typography>
               </Toolbar>
             </AppBar>
-            <Landing classes={classes} Projects={Projects}/>
+            <Route path={'/'} exact component={() => <Landing classes={classes} Projects={Projects}/>}/>
+            <Route component={() => <div>dunno</div>}/>
             <Fab href={'mailto:alexsimons9999@gmail.com?subject=Hey, Alex! Do you have time to talk?'}
                  size={"large"}
                  title={'You like sending emails, don\'t you?'}
