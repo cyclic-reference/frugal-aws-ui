@@ -4,7 +4,7 @@ import blue from "@material-ui/core/es/colors/blue";
 import green from "@material-ui/core/es/colors/green";
 import red from "@material-ui/core/es/colors/red";
 import build from './images/build.svg';
-import GreenFlag from './images/GreenFlag.svg'
+import GreenLight from './images/GreenLight.svg'
 import cloud from './images/cloud.svg'
 import dogecoin from './images/dogecoin.svg';
 
@@ -21,7 +21,7 @@ const topics = [
     exerpt:
       'You now have a good fundamental understanding of what a "good" production environment looks like. The next step in your journey is laying out a strategy and figuring out starting place to begin your trip.',
     color: green[500],
-    displayImage: GreenFlag,
+    displayImage: GreenLight,
     path: '/production',
   },
   {

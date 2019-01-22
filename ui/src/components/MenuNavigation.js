@@ -11,6 +11,7 @@ import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import Menu from "@material-ui/icons/Menu";
 import IconButton from "@material-ui/core/IconButton";
+import ReactSVG from "react-svg";
 
 const styles = theme => ({
   list: {
@@ -47,10 +48,12 @@ class MenuNavigation extends React.Component {
     const fullList = (
       <div className={classes.fullList}>
         <List>
-          {topics.map((text, index) => (
-            <ListItem button key={text.title}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon/> : <MailIcon/>}</ListItemIcon>
-              <ListItemText primary={text.title}/>
+          {topics.map((topic) => (
+            <ListItem button key={topic.title}>
+              <ListItemIcon><ReactSVG
+                svgStyle={{width: '50px', height: '50px'}}
+                src={topic.displayImage}/></ListItemIcon>
+              <ListItemText primary={topic.title}/>
             </ListItem>
           ))}
         </List>
