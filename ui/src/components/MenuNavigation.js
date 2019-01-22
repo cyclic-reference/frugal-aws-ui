@@ -12,6 +12,7 @@ import withRouter from "react-router/es/withRouter";
 import IconButton from "@material-ui/core/IconButton";
 import ReactSVG from "react-svg";
 import Link from "react-router-dom/es/Link";
+import home from "../images/home.svg";
 
 const styles = theme => ({
   list: {
@@ -36,6 +37,8 @@ class MenuNavigation extends React.Component {
     drawerOpen: false,
   };
 
+
+
   toggleDrawer = (open) => () => {
     this.setState({
       drawerOpen: open,
@@ -44,11 +47,20 @@ class MenuNavigation extends React.Component {
 
   render() {
     const {classes, topics} = this.props;
-
+    const menuTopics = topics.reduce((a,b)=>{
+      a.push(b);
+      return a;
+    }, [
+      {
+        title: 'Home',
+        displayImage: home,
+        path: '/',
+      }
+    ]);
     const fullList = (
       <div className={classes.fullList}>
         <List>
-          {topics.map((topic, index) => (
+          {menuTopics.map((topic, index) => (
             <Link key={topic.title} to={topic.path} style={{textDecoration: 'none'}}>
               <ListItem button style={{backgroundColor: index % 2 === 0 ? '#f6f6f6': 'white'}}>
                 <ListItemIcon><ReactSVG
