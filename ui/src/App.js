@@ -11,7 +11,7 @@ import AppBar from "@material-ui/core/es/AppBar/AppBar";
 import Topics from './Topics';
 import Fab from "@material-ui/core/es/Fab/Fab";
 import EmailIcon from '@material-ui/icons/Email'
-import red from '@material-ui/core/colors/red'
+import yellow from '@material-ui/core/colors/yellow'
 import orange from '@material-ui/core/colors/orange'
 import Landing from "./components/Landing";
 import MenuNavigation from "./components/MenuNavigation";
@@ -51,8 +51,8 @@ const styles = theme => ({
     marginTop: theme.spacing.unit * 3,
   },
   fab: {
-    backgroundColor: red[500],
-    color: theme.palette.grey[100],
+    backgroundColor: yellow[500],
+    color: theme.palette.grey[900],
     position: 'fixed',
     bottom: theme.spacing.unit * 2,
     right: theme.spacing.unit * 2,

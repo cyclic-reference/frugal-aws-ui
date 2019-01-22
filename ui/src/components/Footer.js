@@ -1,5 +1,5 @@
 import Typography from "@material-ui/core/es/Typography/Typography";
-import Reach from "../images/reach_red.svg";
+import Reach from "../images/reach_yellow.svg";
 import React from "react";
 import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
@@ -9,7 +9,7 @@ import LinkedIn from "./LinkedIn";
 import {Code} from "@material-ui/icons";
 import Card from "@material-ui/core/es/Card/Card";
 import CardContent from "@material-ui/core/es/CardContent/CardContent";
-import red from "@material-ui/core/es/colors/red";
+import yellow from "@material-ui/core/es/colors/yellow";
 import Trello from "./Trello";
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
@@ -34,8 +34,8 @@ const styles = theme => ({
   },
   socialLink: {
     marginRight: '0.5em',
-    backgroundColor: red[500],
-    color: theme.palette.grey[100],
+    backgroundColor: yellow[600],
+    color: theme.palette.grey[900],
   },
   card: {
     color: theme.palette.grey[200],
