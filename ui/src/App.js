@@ -101,11 +101,10 @@ const App = props => {
                   component="h2"
                   variant="h5"
                   color="inherit"
-                  align="center"
                   noWrap
                   className={classes.toolbarTitle}
                 >
-                  Frugal AWS
+                  The Frugal AWS Dev
                 </Typography>
               </Toolbar>
             </AppBar>

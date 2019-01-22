@@ -7,11 +7,11 @@ import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
 import Menu from "@material-ui/icons/Menu";
+import withRouter from "react-router/es/withRouter";
 import IconButton from "@material-ui/core/IconButton";
 import ReactSVG from "react-svg";
+import Link from "react-router-dom/es/Link";
 
 const styles = theme => ({
   list: {
@@ -48,13 +48,15 @@ class MenuNavigation extends React.Component {
     const fullList = (
       <div className={classes.fullList}>
         <List>
-          {topics.map((topic) => (
-            <ListItem button key={topic.title}>
-              <ListItemIcon><ReactSVG
-                svgStyle={{width: '50px', height: '50px'}}
-                src={topic.displayImage}/></ListItemIcon>
-              <ListItemText primary={topic.title}/>
-            </ListItem>
+          {topics.map((topic, index) => (
+            <Link key={topic.title} to={topic.path} style={{textDecoration: 'none'}}>
+              <ListItem button style={{backgroundColor: index % 2 === 0 ? '#f6f6f6': 'white'}}>
+                <ListItemIcon><ReactSVG
+                  svgStyle={{width: '50px', height: '50px'}}
+                  src={topic.displayImage}/></ListItemIcon>
+                <ListItemText primary={topic.title}/>
+              </ListItem>
+            </Link>
           ))}
         </List>
         <Divider/>
@@ -88,4 +90,4 @@ MenuNavigation.propTypes = {
   topics: PropTypes.array.isRequired,
 };
 
-export default withStyles(styles)(MenuNavigation);
+export default withRouter(withStyles(styles)(MenuNavigation));
