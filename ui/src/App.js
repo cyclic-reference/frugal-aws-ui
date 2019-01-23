@@ -50,13 +50,6 @@ const styles = theme => ({
   sidebarSection: {
     marginTop: theme.spacing.unit * 3,
   },
-  fab: {
-    backgroundColor: yellow[500],
-    color: theme.palette.grey[900],
-    position: 'fixed',
-    bottom: theme.spacing.unit * 2,
-    right: theme.spacing.unit * 2,
-  },
   shrugContainer: {
     padding: '1em',
     marginTop: '2em',
@@ -130,12 +123,6 @@ const App = props => {
               </div>
               }/>
             </Switch>
-            <Fab href={'mailto:alexsimons9999@gmail.com?subject=Hey, Alex! Do you have time to talk?'}
-                 size={"large"}
-                 title={'You like sending emails, don\'t you?'}
-                 className={classes.fab}>
-              <EmailIcon/>
-            </Fab>
             <Footer/>
           </div>
         </Router>
