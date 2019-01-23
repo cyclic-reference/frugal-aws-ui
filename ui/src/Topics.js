@@ -14,7 +14,7 @@ const topics = [
     exerpt: 'This section will explain the positive traits that are exhibited by well established production environments.',
     color: purple[500],
     displayImage: Question,
-    path: '/production',
+    path: '/what/is/production',
   },
   {
     title: 'Where do I start?',
@@ -22,7 +22,7 @@ const topics = [
       'You now have a good fundamental understanding of what a "good" production environment looks like. The next step in your journey is laying out a strategy and figuring out starting place to begin your trip.',
     color: green[500],
     displayImage: GreenLight,
-    path: '/production',
+    path: '/how/to/start',
   },
   {
     title: 'How do I develop locally?',
@@ -31,7 +31,7 @@ const topics = [
       'This section is devoted in showing how to start putting these block together.',
     color: blue[500],
     displayImage: build,
-    path: '/production',
+    path: '/develop/local',
   },
   {
     title: 'How Do I go to Production?',
@@ -40,7 +40,7 @@ const topics = [
       'Here we will learn how to get our production into AWS while drawing on our past knowledge to guide us along.',
     color: purple[500],
     displayImage: cloud,
-    path: '/production',
+    path: '/go/to/production',
   },
   {
     title: 'How much is Production?',
@@ -48,7 +48,7 @@ const topics = [
       'Here we recap what can be expected to pay while maintaining our production environment.',
     color: red[500],
     displayImage: dogecoin,
-    path: '/production',
+    path: '/dolla/dolla/bill/yall',
   },
 ];
 
