@@ -10,13 +10,14 @@ const styles = theme => ({
 });
 
 
-function BaseTopicView(props) {
+function BaseTopicView({children, classes}) {
+  console.warn(classes.layout)
   return (
-    <div>
+    <div className={classes.layout}>
       <Link to={'/'} style={{textDecoration: 'none'}}>
         Home
       </Link>
-      {props.children}
+      {children}
       <div>Feeter</div>
     </div>
   );

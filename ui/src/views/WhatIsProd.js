@@ -9,7 +9,7 @@ const styles = theme => ({
 });
 
 const WhatIsProd = ({classes}) => (
-  <BaseTopicView>
+  <BaseTopicView classes={classes}>
     <div className={classes.thing}>Ello govna</div>
   </BaseTopicView>
 );

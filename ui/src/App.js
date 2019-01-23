@@ -112,7 +112,7 @@ const App = props => {
               <Route path={'/'} exact component={() => <Landing classes={classes} Topics={Topics}/>}/>
               {Topics
                 .filter(topic => !!topic.viewComponent)
-                .map(topic => <Route path={topic.path} component={topic.viewComponent}/>)}
+                .map(topic => <Route path={topic.path} component={props=><topic.viewComponent {...props} classes={classes}/>}/>)}
               <Route component={() => <div>
                 <div className={classes.shrugContainer}>
                   <img
