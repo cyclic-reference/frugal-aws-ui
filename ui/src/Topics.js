@@ -7,6 +7,7 @@ import build from './images/build.svg';
 import GreenLight from './images/GreenLight.svg'
 import cloud from './images/cloud.svg'
 import dogecoin from './images/dogecoin.svg';
+import GitHub from "./components/Github";
 
 const topics = [
   {
@@ -15,6 +16,7 @@ const topics = [
     color: purple[500],
     displayImage: Question,
     path: '/what/is/production',
+    viewComponent: (GitHub),
   },
   {
     title: 'Where do I start?',

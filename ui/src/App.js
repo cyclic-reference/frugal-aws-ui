@@ -110,6 +110,9 @@ const App = props => {
             </AppBar>
             <Switch>
               <Route path={'/'} exact component={() => <Landing classes={classes} Topics={Topics}/>}/>
+              {Topics
+                .filter(topic => !!topic.viewComponent)
+                .map(topic => <Route path={topic.path} component={topic.viewComponent}/>)}
               <Route component={() => <div>
                 <div className={classes.shrugContainer}>
                   <img
