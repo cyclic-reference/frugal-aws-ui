@@ -7,7 +7,7 @@ import build from './images/build.svg';
 import GreenLight from './images/GreenLight.svg'
 import cloud from './images/cloud.svg'
 import dogecoin from './images/dogecoin.svg';
-import GitHub from "./components/Github";
+import WhatIsProd from "./views/WhatIsProd";
 
 const topics = [
   {
@@ -16,7 +16,7 @@ const topics = [
     color: purple[500],
     displayImage: Question,
     path: '/what/is/production',
-    viewComponent: (GitHub),
+    viewComponent: (WhatIsProd),
   },
   {
     title: 'Where do I start?',
@@ -46,7 +46,7 @@ const topics = [
   },
   {
     title: 'How much is Production?',
-    exerpt:'Money talks, throughout the previous section we discussed where we can optimize our costs while deploying to production. ' +
+    exerpt: 'Money talks, throughout the previous section we discussed where we can optimize our costs while deploying to production. ' +
       'Here we recap what can be expected to pay while maintaining our production environment.',
     color: red[500],
     displayImage: dogecoin,
