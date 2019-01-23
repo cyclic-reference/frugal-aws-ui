@@ -8,6 +8,11 @@
   background-repeat: repeat-y, repeat-y !important;
 }
 
+a {
+  text-decoration: none;
+  color: inherit
+}
+
 
 img {
   max-width: 100%;
