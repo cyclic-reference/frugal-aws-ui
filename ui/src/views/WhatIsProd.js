@@ -19,11 +19,18 @@ const markdown = `
 For starters, it is pretty great, you should try it out some time!
 Here are some characteristics that great production environments contain:
 
-  - aoeu
-  - saoeu
-  - aoeus
+  - Secure Network Traffic
+  - Sub-Domain Support
+  - Graceful Error Handling
+  - Respond Quickly
+  - Path Support
 
-## reps 4 jesus
+### Secure Network Traffic
+### Sub-Domain Support
+### Graceful Error Handling
+### Respond Quickly
+### Path Support
+
 `;
 
 const WhatIsProd = ({classes}) => (
