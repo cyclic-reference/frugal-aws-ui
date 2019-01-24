@@ -33,7 +33,7 @@ function BaseTopicView({children, classes}) {
       <Link to={'/'} style={{textDecoration: 'none'}}>
         <Fab className={classes.fab}>
           <ReactSVG
-            svgStyle={{width: '35px', height: '35px'}}
+            svgStyle={{width: '30px', height: '30px'}}
             src={home}/>
         </Fab>
       </Link>

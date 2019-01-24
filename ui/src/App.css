@@ -2,7 +2,7 @@
   background: url('images/stripe.png') fixed, linear-gradient(#E0E0E0,#E0E0E0, rgba(225, 226, 40, 0.83));
 }
 
-.backdrop, root, html, body{
+.backdrop, #root, html, body{
   height: 100%;
 }
 
