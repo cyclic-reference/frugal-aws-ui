@@ -15,7 +15,14 @@ const styles = theme => ({
 });
 
 const markdown = `
-# yolo
+## What is production like?
+For starters, it is pretty great, you should try it out some time!
+Here are some characteristics that great production environments contain:
+
+  - aoeu
+  - saoeu
+  - aoeus
+
 ## reps 4 jesus
 `;
 

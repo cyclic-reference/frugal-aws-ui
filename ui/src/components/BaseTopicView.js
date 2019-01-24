@@ -18,6 +18,9 @@ const styles = theme => ({
     bottom: theme.spacing.unit * 2,
     right: theme.spacing.unit * 2,
   },
+  postContainer: {
+    backgroundColor: 'rgba(155,155,155,1)',
+  }
 });
 
 
@@ -28,7 +31,9 @@ function BaseTopicView({children, classes}) {
       <Link to={'/'} style={{textDecoration: 'none'}}>
         Go Home
       </Link>
-      {children}
+      <div className={classes.postContainer}>
+        {children}
+      </div>
       <div>Feeter</div>
       <Link to={'/'} style={{textDecoration: 'none'}}>
         <Fab className={classes.fab}>
