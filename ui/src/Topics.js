@@ -9,6 +9,7 @@ import cloud from './images/cloud.svg'
 import dogecoin from './images/dogecoin.svg';
 import WhatIsProd from "./views/WhatIsProd";
 import WhereToStart from "./views/WhereToStart";
+import DevelopLocal from "./views/DevelopLocal";
 
 const topics = [
   {
@@ -36,6 +37,7 @@ const topics = [
     color: blue[500],
     displayImage: build,
     path: '/develop/local',
+    viewComponent: (DevelopLocal),
   },
   {
     title: 'How Do I go to Production?',
