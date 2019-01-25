@@ -65,6 +65,10 @@ Whether the system fails or succeeds do not make the user wait to find out.
 
 ### Path Support
 
+If I were to put a url into the browser address then, I expect to take me to the content that I was viewing at the time.
+
+For example, if I put [https://learn.acari.io/reactive/explanations/why](https://learn.acari.io/reactive/explanations/why) 
+into my browser address, it better take me to the page that I was viewing when I copied that url. 
 
 `;
 
