@@ -8,6 +8,7 @@ import GreenLight from './images/GreenLight.svg'
 import cloud from './images/cloud.svg'
 import dogecoin from './images/dogecoin.svg';
 import WhatIsProd from "./views/WhatIsProd";
+import WhereToStart from "./views/WhereToStart";
 
 const topics = [
   {
@@ -25,6 +26,7 @@ const topics = [
     color: green[500],
     displayImage: GreenLight,
     path: '/how/to/start',
+    viewComponent: (WhereToStart),
   },
   {
     title: 'How do I develop locally?',
