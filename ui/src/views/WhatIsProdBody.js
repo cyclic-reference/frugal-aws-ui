@@ -55,6 +55,14 @@ Make sure that if your system has to go down for mmaintenance, make sure that wi
 ![404](https://raw.githubusercontent.com/cyclic-reference/frugal-aws-ui/master/presentation/images/github-maintenance.png)
 
 ### Respond Quickly
+
+Always respond to the user quickly.
+
+- Fail Fast
+- Succeed Immediately
+
+Whether the system fails or succeeds do not make the user wait to find out.
+
 ### Path Support
 
 
