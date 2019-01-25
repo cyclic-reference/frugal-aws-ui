@@ -10,6 +10,7 @@ import dogecoin from './images/dogecoin.svg';
 import WhatIsProd from "./views/WhatIsProd";
 import WhereToStart from "./views/WhereToStart";
 import DevelopLocal from "./views/DevelopLocal";
+import GoToProd from "./views/GoToProd";
 
 const topics = [
   {
@@ -47,6 +48,7 @@ const topics = [
     color: purple[500],
     displayImage: cloud,
     path: '/go/to/production',
+    viewComponent: (GoToProd),
   },
   {
     title: 'How much is Production?',
