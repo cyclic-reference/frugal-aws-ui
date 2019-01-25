@@ -25,8 +25,39 @@ These may or may not serve static content as well
 **The distinction between these two categories is the amount of $$ you will spend*
 
 ### Install Docker on your local machine
+
+In the end, Docker is going to be doing most of the heavy lifting to prod.
+Things Docker will do for us:
+
+- Service Provider
+- Secure Network Communication
+- Uniform Platform Provider
+
+#### Service Provider
+Docker easily provides things like: Databases, Message Queues, Content Servers.
+All of which support our _Web Services_.
+
+All **without** having to install any other software.
+Once it works on your machine, then it works in production (provided your compute instance has Docker and made minor tweaks).
+
+#### Secure Network Communication
+All services communicate, on their own special network, with each other.
+So there is not much need to maintain SSL between Docker processes, as none of them are public.
+                    
+#### Uniform Platform Provider
+I can develop on a MacBook and deploy to prod on a Linux server and it will all work the same.
+Docker is supported on most major Operating Systems.
+
+Please see the Docker [compatibility matrix](https://success.docker.com/article/compatibility-matrix) for more information.
+
 ### Acquire AWS Account
+
+[Get that shizz yo](https://portal.aws.amazon.com/billing/signup?nc2=h_ct&src=header_signup&redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation#/start)
+
 ### Combine the above
+
+
+
 ### Profit!
 
 `;
