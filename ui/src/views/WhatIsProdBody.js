@@ -29,10 +29,31 @@ Meaning that the issued certificates have not expired and where given to you by 
 
 Notice how http://google.com opens up https://google.com
 
-
-
 ### Sub-Domain Support
+
+Users should expect to be able to visit the main domain **google.com** and also expect a family of services to be available at **\*.google.com** such as: drive.google.com and maps.google.com.
+
+#### https://google.com:3000/index.html
+Then why is it you always see things like these: **localhost:3000** or **localhost:8080**, when developing locally??
+We will cover that [in this section](https://frugal-aws.acari.io/develop/local). 
+If you already have this down, good for you! However still be sure to check it out.
+
 ### Graceful Error Handling
+
+When things do not work as expected, inform the user that such a thing has happened.
+
+However, no person has probably ever said, "I like it when I see this, it makes me feel good." when the see this.
+
+![404](https://raw.githubusercontent.com/cyclic-reference/frugal-aws-ui/master/presentation/images/404_lame.png)
+
+Make error handling fun and informative
+
+![404_fun](https://raw.githubusercontent.com/cyclic-reference/frugal-aws-ui/master/presentation/images/404.png)
+
+Make sure that if your system has to go down for mmaintenance, make sure that window of time is handled as well. 
+
+![404](https://raw.githubusercontent.com/cyclic-reference/frugal-aws-ui/master/presentation/images/github-maintenance.png)
+
 ### Respond Quickly
 ### Path Support
 
