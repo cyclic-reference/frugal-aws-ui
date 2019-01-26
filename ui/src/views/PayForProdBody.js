@@ -18,6 +18,8 @@ For the Extremely motivated
 You can support your own prod for about $2.00 a month
 After a year you are looking at about $15 a month
 
+### For more information about the costs please see the details in the [Production Setup Page](https://frugal-aws.acari.io/go/to/prod)
+
 `;
 
 export default markdown;
