@@ -11,6 +11,7 @@ import WhatIsProd from "./views/WhatIsProd";
 import WhereToStart from "./views/WhereToStart";
 import DevelopLocal from "./views/DevelopLocal";
 import GoToProd from "./views/GoToProd";
+import PayForProd from "./views/PayForProd";
 
 const topics = [
   {
@@ -57,6 +58,7 @@ const topics = [
     color: red[500],
     displayImage: dogecoin,
     path: '/dolla/dolla/bill/yall',
+    viewComponent: (PayForProd),
   },
 ];
 
