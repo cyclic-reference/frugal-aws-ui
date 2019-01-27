@@ -89,7 +89,7 @@ const Footer = props => {
                 {socialLinks.map(socialLink => (
                   <GridListTile key={socialLink.title} cols={1}>
                     <Fab
-                      classes={'primary'}
+                      color={'primary'}
                       className={classes.socialLink}
                          title={socialLink.title}
                          href={socialLink.link}
@@ -110,7 +110,7 @@ const Footer = props => {
         </a>
       </div>
     </footer>
-    <div style={{paddingLeft: '1em', color: '#EAEAEA', opacity: 0.25}}>
+    <div style={{paddingLeft: '1em', color: '#292929',opacity: 0.5}}>
       <Typography color={"inherit"}>
         v1.0.0
       </Typography>

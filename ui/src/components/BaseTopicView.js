@@ -3,7 +3,6 @@ import {withStyles} from '@material-ui/core/styles';
 import withRouter from "react-router/es/withRouter";
 import Link from "react-router-dom/es/Link";
 import Fab from "@material-ui/core/es/Fab";
-import yellow from "@material-ui/core/colors/yellow";
 import {Home} from "@material-ui/icons";
 import Button from "@material-ui/core/es/Button";
 
@@ -20,7 +19,7 @@ const styles = theme => ({
     color: theme.palette.grey[800]
   },
   layout: {
-    backgroundColor: yellow[700],
+    backgroundColor: '#e6e6e6',
     padding: '1.5em',
     borderRadius: '0.5em',
     boxShadow: '0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);',
@@ -61,7 +60,7 @@ function BaseTopicView({children, classes, topic}) {
         }
       </div>
       <Link to={'/'} style={{textDecoration: 'none'}}>
-        <Fab classes={'primary'} className={classes.fab} title={'Frugal AWS Dev Home'}>
+        <Fab color={'primary'} classes={'primary'} className={classes.fab} title={'Frugal AWS Dev Home'}>
           <Home/>
         </Fab>
       </Link>

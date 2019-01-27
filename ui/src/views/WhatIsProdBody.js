@@ -8,6 +8,8 @@ Here are some characteristics that great production environments contain:
   - Graceful Error Handling
   - Respond Quickly
   - Path Support
+  
+---
 
 ### Secure Network Traffic
 
@@ -29,6 +31,8 @@ In addition to having HTTPs it also is great if any HTTP communication be automa
 
 > Notice how when http://google.com~!@ is executed it automatically becomes https://google.com~!@.
 
+---
+
 ### Sub-Domain Support
 
 Users should expect to be able to visit the main domain **google.com** and also expect a family of services to be available at ***.google.com** such as: drive.google.com and maps.google.com.
@@ -40,6 +44,8 @@ Then why is it you always see things like these: **localhost:3000** or **localho
 That will be covered that [in this section](https://frugal-aws.acari.io/develop/local).
  
 If you already have this down, good for you! However still be sure to check it out.
+
+---
 
 ### Graceful Error Handling
 
@@ -57,6 +63,8 @@ Make sure that if your system has to go down for maintenance, make sure that win
 
 ![404](https://raw.githubusercontent.com/cyclic-reference/frugal-aws-ui/master/presentation/images/github-maintenance.png)
 
+---
+
 ### Respond Quickly
 
 Always respond to the user quickly.
@@ -65,6 +73,8 @@ Always respond to the user quickly.
 - Succeed Immediately
 
 Whether the system fails or succeeds do not make the user wait to find out.
+
+---
 
 ### Path Support
 

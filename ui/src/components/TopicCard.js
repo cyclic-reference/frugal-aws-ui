@@ -16,7 +16,7 @@ import yellow from "@material-ui/core/colors/yellow";
 
 const styles = theme => ({
   card: {
-    backgroundColor: yellow[700],
+    backgroundColor: '#e6e6e6',
     color: theme.palette.grey[800],
     backgroundImage: `url(${HexBottom})`,
     backgroundPosition: 'left bottom',
