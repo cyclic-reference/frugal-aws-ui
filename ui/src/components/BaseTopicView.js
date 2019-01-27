@@ -4,8 +4,7 @@ import withRouter from "react-router/es/withRouter";
 import Link from "react-router-dom/es/Link";
 import Fab from "@material-ui/core/es/Fab";
 import yellow from "@material-ui/core/colors/yellow";
-import home from "../images/home.svg";
-import ReactSVG from "react-svg";
+import {Home} from "@material-ui/icons";
 
 const styles = theme => ({
   listItem: {
@@ -44,10 +43,8 @@ function BaseTopicView({children, classes, topic}) {
       }
       <div>Feeter</div>
       <Link to={'/'} style={{textDecoration: 'none'}}>
-        <Fab className={classes.fab}>
-          <ReactSVG
-            svgStyle={{width: '30px', height: '30px'}}
-            src={home}/>
+        <Fab className={classes.fab} title={'Frugal AWS Dev Home'}>
+          <Home/>
         </Fab>
       </Link>
     </div>
