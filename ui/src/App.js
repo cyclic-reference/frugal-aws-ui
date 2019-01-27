@@ -37,7 +37,7 @@ const styles = theme => ({
     marginBottom: '1em',
   },
   toolbarTitle: {
-    color: theme.palette.grey[100],
+    color: theme.palette.grey[800],
     flex: 1,
   },
   sidebarAboutBox: {

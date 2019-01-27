@@ -22,7 +22,7 @@ const styles = theme => ({
     width: 'auto',
   },
   menuButton: {
-    color: theme.palette.grey[100],
+    color: theme.palette.grey[800],
     marginLeft: -12,
     marginRight: 20,
   },
