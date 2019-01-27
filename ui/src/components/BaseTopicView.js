@@ -30,13 +30,13 @@ const styles = theme => ({
 function BaseTopicView({children, classes, topic}) {
   return (
     <div className={classes.layout}>
-      <Button variant={"contained"}
-              size='medium'
-              color='primary'>
-        <Link to={'/'} style={{textDecoration: 'none'}}>
+      <Link to={'/'} style={{textDecoration: 'none'}}>
+        <Button variant={"contained"}
+                size='medium'
+                color='primary'>
           Go Home
-        </Link>
-      </Button>
+        </Button>
+      </Link>
       <div className={classes.postContainer}>
         {children}
       </div>
