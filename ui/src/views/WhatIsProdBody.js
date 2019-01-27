@@ -31,7 +31,7 @@ This is an example of what invalid certificate do to a website:
 
 In addition to having HTTPs it also is great if any HTTP communication be automatically redirected to the respective HTTPS communication.
 
-Notice how when http://google.com and executed it automatically becomes https://google.com.
+> Notice how when http://google.com and executed it automatically becomes https://google.com.
 
 ### Sub-Domain Support
 

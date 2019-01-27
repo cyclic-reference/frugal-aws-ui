@@ -24,7 +24,7 @@ const options = {
                                   color='primary'><a {...props} target={"_blank"}/></Button>,
     },
     img: {
-      component: props => <div class="image-conainer"><img {...props}/></div>,
+      component: props => <div class="image-container"><img {...props}/></div>,
       props: {
         style: {
           borderWidth: '4px',
