@@ -32,7 +32,7 @@ Notice how when http://google.com and executed it automatically becomes https://
 
 ### Sub-Domain Support
 
-Users should expect to be able to visit the main domain **google.com** and also expect a family of services to be available at **\*.google.com** such as: drive.google.com and maps.google.com.
+Users should expect to be able to visit the main domain **google.com** and also expect a family of services to be available at ***.google.com** such as: drive.google.com and maps.google.com.
 
 > https://google.com:3000/index.html
 

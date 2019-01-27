@@ -19,8 +19,11 @@ const styles = theme => ({
     right: theme.spacing.unit * 2,
   },
   postContainer: {
-    backgroundColor: 'rgba(155,155,155,1)',
-  }
+    backgroundColor: '#E9E9E9',
+    padding: '1em',
+    borderRadius: '0.5em',
+    boxShadow: '0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);',
+}
 });
 
 

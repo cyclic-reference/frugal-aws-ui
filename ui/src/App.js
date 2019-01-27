@@ -9,7 +9,6 @@ import Typography from '@material-ui/core/Typography';
 import Footer from "./components/Footer";
 import AppBar from "@material-ui/core/es/AppBar/AppBar";
 import Topics from './Topics';
-import orange from '@material-ui/core/colors/orange'
 import Landing from "./components/Landing";
 import MenuNavigation from "./components/MenuNavigation";
 import Shrug from './images/shrug_shadow.png';
@@ -103,7 +102,7 @@ const App = props => {
               <Route path={'/'} exact component={() => <Landing classes={classes} Topics={Topics}/>}/>
               {Topics
                 .filter(topic => !!topic.viewComponent)
-                .map(topic => <Route path={topic.path} component={props=><topic.viewComponent {...props} topic={topic} classes={classes}/>}/>)}
+                .map(topic => <Route key={topic.path} path={topic.path} component={props=><topic.viewComponent {...props} topic={topic} classes={classes}/>}/>)}
               <Route component={() => <div>
                 <div className={classes.shrugContainer}>
                   <img
