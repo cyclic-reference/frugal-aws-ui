@@ -27,16 +27,16 @@ Allowing for a single server to handle requests for many domains, which means th
 This server will also handle all graceful failure pages that the user may see while interacting with your domain.
 
 #### The React Application
-Will be accessible from https://static-site.localhost
+Will be accessible from ** https://static-site.localhost~!@ **.
 The static content will be served by the NGINX server
 
 #### The Spring Application
-Will be accessible from https://compute-app-one.localhost
+Will be accessible from ** https://compute-app-one.localhost~!@ **.
 The static content will be served by the Spring Boot app via the NGINX proxy server.
 The NGINX server will access the spring boot server via the Docker supplied host name: **compute-app-one**
 
 #### The Express Application
-Will be accessible from https://compute-app-two.localhost
+Will be accessible from ** https://compute-app-two.localhost~!@ **.
 The static content will be served by the Express app via the NGINX proxy server.
 The NGINX server will access the spring boot server via the Docker supplied host name: **compute-app-two**
 

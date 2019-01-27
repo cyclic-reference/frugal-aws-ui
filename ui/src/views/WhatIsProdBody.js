@@ -31,13 +31,13 @@ This is an example of what invalid certificate do to a website:
 
 In addition to having HTTPs it also is great if any HTTP communication be automatically redirected to the respective HTTPS communication.
 
-> Notice how when http://google.com and executed it automatically becomes https://google.com.
+> Notice how when http://google.com~!@ is executed it automatically becomes https://google.com~!@.
 
 ### Sub-Domain Support
 
 Users should expect to be able to visit the main domain **google.com** and also expect a family of services to be available at ***.google.com** such as: drive.google.com and maps.google.com.
 
-> https://google.com:3000/index.html
+> https://google.com:3000/index.html~!@
 
 I have great confidence that you have never had to do the above. 
 Then why is it you always see things like these: **localhost:3000** or **localhost:8080**, when developing locally??

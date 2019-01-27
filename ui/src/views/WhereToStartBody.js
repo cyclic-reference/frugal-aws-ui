@@ -34,7 +34,7 @@ Things Docker will do for us:
 - Secure Network Communication
 - Uniform Platform Provider
 
-###[Docker can be found here.](https://docs.docker.com/install/)
+###[Docker's installation can be found here.](https://docs.docker.com/install/)
 
 #### Service Provider
 Docker easily provides things like: Databases, Message Queues, Content Servers.

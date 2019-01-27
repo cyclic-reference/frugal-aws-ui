@@ -19,16 +19,21 @@ const options = {
     h5: {component: props => <Typography gutterBottom variant="caption" paragraph {...props} />},
     p: {component: props => <Typography paragraph {...props} />},
     a: {
-      component: props =>
-        <a {...props} target={"_blank"}>
-          <Button variant={"contained"}
-                  size='medium'
-                  color='primary'>
-            {props.children}
-          </Button></a>,
+      component: props => {
+        if (props.children && props.children.filter(child => child.indexOf && child.indexOf('~!@') > -1).length > 0) {
+          return <span>{props.href.substring(0, props.href.length - 3)}</span>
+        } else {
+          return <a {...props} target={"_blank"}>
+            <Button variant={"contained"}
+                    size='medium'
+                    color='primary'>
+              {props.children}
+            </Button></a>;
+        }
+      },
     },
     img: {
-      component: props => <div class="image-container"><img {...props}/></div>,
+      component: props => <div className="image-container"><img {...props}/></div>,
       props: {
         style: {
           borderWidth: '4px',

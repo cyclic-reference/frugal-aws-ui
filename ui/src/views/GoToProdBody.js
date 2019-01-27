@@ -43,7 +43,7 @@ In order have a single server handle the requests across many of your domains, N
 Allowing for a single server to handle requests for many domains, which means that you have to pay less.
 
 The host header configuration will have to be different now that it will be running under an actual domain.
-So **https://compute-app-one.localhost** will turn into **https://compute-app-one.sample-domain.com**
+So https://compute-app-one.localhost~!@  will turn into https://compute-app-one.sample-domain.com~!@.
 
 The most easy way to get your Let's Encrypt Certificates will be by running the [certbot](https://github.com/certbot/certbot/tree/master/certbot-dns-route53) on your local machine.
 
