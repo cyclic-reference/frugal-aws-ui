@@ -34,9 +34,12 @@ Notice how when http://google.com and executed it automatically becomes https://
 
 Users should expect to be able to visit the main domain **google.com** and also expect a family of services to be available at **\*.google.com** such as: drive.google.com and maps.google.com.
 
-#### https://google.com:3000/index.html
+> https://google.com:3000/index.html
+
+I have great confidence that you have never had to do the above. 
 Then why is it you always see things like these: **localhost:3000** or **localhost:8080**, when developing locally??
-We will cover that [in this section](https://frugal-aws.acari.io/develop/local). 
+That will be covered that [in this section](https://frugal-aws.acari.io/develop/local).
+ 
 If you already have this down, good for you! However still be sure to check it out.
 
 ### Graceful Error Handling
