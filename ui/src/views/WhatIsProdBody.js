@@ -12,22 +12,23 @@ Here are some characteristics that great production environments contain:
 ### Secure Network Traffic
 
 This day in age there is really no good reason as to why any website should accessed through insecure communication channels.
-If you want to read mor about why HTTPS please see [this link](https://ahrefs.com/blog/http-vs-https-for-seo/).
+If you want to read more about why HTTPS is preferred over HTTP please see [this link](https://ahrefs.com/blog/http-vs-https-for-seo/).
 
-This means that any user should be able to see the secure lock whenever they go to an address on your domain.
+Given that the above is true, then this means that any user should be able to see the secure lock whenever they visit anything on your domain.
 
-So the certificates hove to be **valid** and **trusted**. 
+Just having HTTPS is not enough, the certificates have to be **valid** and **trusted**. 
 
 ![Secure Site](https://raw.githubusercontent.com/cyclic-reference/frugal-aws-ui/master/presentation/images/secure_site.png)
 
-Meaning that the issued certificates have not expired and where given to you by a trusted certificate entity.
+Meaning that the issued certificates have not expired and were issued by a trusted certificate entity.
 
-### Not this!
+This is an example of what invalid certificate do to a website:
+
 ![Insecure Site](https://raw.githubusercontent.com/cyclic-reference/frugal-aws-ui/master/presentation/images/bad-https.png)
 
-> Any HTTP URL should automatically redirect to the respective HTTPS URI.
+In addition to having HTTPs it also is great if any HTTP communication be automatically redirected to the respective HTTPS communication.
 
-Notice how http://google.com opens up https://google.com
+Notice how when http://google.com and executed it automatically becomes https://google.com.
 
 ### Sub-Domain Support
 
@@ -50,7 +51,7 @@ Make error handling fun and informative
 
 ![404_fun](https://raw.githubusercontent.com/cyclic-reference/frugal-aws-ui/master/presentation/images/404.png)
 
-Make sure that if your system has to go down for mmaintenance, make sure that window of time is handled as well. 
+Make sure that if your system has to go down for maintenance, make sure that window of time is handled as well. 
 
 ![404](https://raw.githubusercontent.com/cyclic-reference/frugal-aws-ui/master/presentation/images/github-maintenance.png)
 
