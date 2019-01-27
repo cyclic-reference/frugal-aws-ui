@@ -83,7 +83,7 @@ class TopicCard extends React.Component {
           <Link to={topic.path} style={{textDecoration: 'none'}}>
             <Button variant={"contained"}
                     size='medium'
-                    color='default'>
+                    color='primary'>
               Read More
             </Button>
           </Link>

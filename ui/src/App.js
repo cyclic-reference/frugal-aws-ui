@@ -13,6 +13,7 @@ import orange from '@material-ui/core/colors/orange'
 import Landing from "./components/Landing";
 import MenuNavigation from "./components/MenuNavigation";
 import Shrug from './images/shrug_shadow.png';
+import yellow from "@material-ui/core/es/colors/yellow";
 
 const styles = theme => ({
   layout: {
@@ -69,8 +70,8 @@ const styles = theme => ({
 
 const theme = createMuiTheme({
   palette: {
-    secondary: {
-      main: orange[500],
+    primary: {
+      main: yellow[400],
     },
   },
   typography: {useNextVariants: true},
