@@ -11,12 +11,13 @@ import Button from '@material-ui/core/es/Button/Button';
 import HexBottom from '../images/hex-bottom.png';
 import withRouter from "react-router/es/withRouter";
 import {Link} from "react-router-dom";
+import yellow from "@material-ui/core/es/colors/yellow";
 
 
 const styles = theme => ({
   card: {
-    backgroundColor: theme.palette.grey[400],
-    color: theme.palette.grey[800],
+    backgroundColor: yellow[600],
+    color: theme.palette.grey[900],
     backgroundImage: `url(${HexBottom})`,
     backgroundPosition: 'left bottom',
     backgroundRepeat: 'repeat-x',

@@ -9,9 +9,6 @@ import Typography from '@material-ui/core/Typography';
 import Footer from "./components/Footer";
 import AppBar from "@material-ui/core/es/AppBar/AppBar";
 import Topics from './Topics';
-import Fab from "@material-ui/core/es/Fab/Fab";
-import EmailIcon from '@material-ui/icons/Email'
-import yellow from '@material-ui/core/colors/yellow'
 import orange from '@material-ui/core/colors/orange'
 import Landing from "./components/Landing";
 import MenuNavigation from "./components/MenuNavigation";
@@ -36,11 +33,11 @@ const styles = theme => ({
     borderBottom: `1px solid ${theme.palette.grey[300]}`,
   },
   header: {
-    backgroundColor: '#E0E0E0',
+    backgroundColor: '#f9a825',
     marginBottom: '1em',
   },
   toolbarTitle: {
-    color: theme.palette.grey[900],
+    color: theme.palette.grey[100],
     flex: 1,
   },
   sidebarAboutBox: {
