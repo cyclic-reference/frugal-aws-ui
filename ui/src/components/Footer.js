@@ -88,7 +88,9 @@ const Footer = props => {
                 I have a ton of words that I would choose to describe myself .
                 However if I had to choose only one, that one would be: <strong>Driven</strong>.
                 I am driven to reach my full potential and use every day to get closer to that goal.
-                If you want to read more about me please see <a className={classes.link} target={'_blank'} href={'https://blog.acari.io/about/index.html'}>this post.</a>
+                If you want to read more about me please see <a className={classes.link} target={'_blank'}
+                                                                href={'https://blog.acari.io/about/index.html'}>this
+                post.</a>
               </Typography><br/>
               <Typography color={'inherit'}>
                 Since you are reading this, chances, are I sent you here.
@@ -116,8 +118,10 @@ const Footer = props => {
         </div>
       </div>
       <div style={{textAlign: 'center'}}>
-        <ReactSVG svgStyle={{width:'100%', height:"100%"}}
-                  src={Reach}/>
+        <a style={{textDecoration: 'none'}} href={'https://acari.io'} target={'_blank'}>
+          <ReactSVG svgStyle={{width: '100%', height: "100%"}}
+                    src={Reach}/>
+        </a>
       </div>
     </footer>
     <div style={{paddingLeft: '1em', color: '#EAEAEA', opacity: 0.25}}>
@@ -126,7 +130,7 @@ const Footer = props => {
       </Typography>
     </div>
   </React.Fragment>;
-}
+};
 
 Footer.propTypes = {
   classes: PropTypes.object.isRequired,
