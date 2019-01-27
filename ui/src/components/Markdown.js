@@ -19,9 +19,13 @@ const options = {
     h5: {component: props => <Typography gutterBottom variant="caption" paragraph {...props} />},
     p: {component: props => <Typography paragraph {...props} />},
     a: {
-      component: props => <Button variant={"contained"}
-                                  size='medium'
-                                  color='primary'><a {...props} target={"_blank"}/></Button>,
+      component: props =>
+        <a {...props} target={"_blank"}>
+          <Button variant={"contained"}
+                  size='medium'
+                  color='primary'>
+            {props.children}
+          </Button></a>,
     },
     img: {
       component: props => <div class="image-container"><img {...props}/></div>,
