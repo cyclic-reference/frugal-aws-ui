@@ -2,23 +2,20 @@ const markdown = `
 # AWS Cost Breakdown
 
 - Route 53: $1.50/month
-- EC2: $0/month
-- EBS: $0/month
-- CloudWatch: $0/month
-- Certificate Manager: $0/month
-- CloudFront: $0.10/month
-- S3: $0.0/month
+- EC2: $0/month (Free For 12-Months)
+- EBS: $0/month (Free For 12-Months)
+- CloudWatch: $0/month (Free For 12-Months)
+- Certificate Manager: $0/month (Free For 12-Months)
+- CloudFront: $0.10/month (Free For 12-Months, excluding invalidations)
+- S3: $0.0/month (Free For 12-Months)
 
-![Awesome](http://i.giphy.com/90F8aUepslB84.gif)
+> You can support your own prod for about $2.00 a month
 
-## Free AWS Services for a Year!
+[See the AWS Free-Tier page for limits and usage.](https://aws.amazon.com/free/free-tier/)
 
-For the Extremely motivated
-
-You can support your own prod for about $2.00 a month
 After a year you are looking at about $15 a month
 
-### For more information about the costs please see the details in the [Production Setup Page](https://frugal-aws.acari.io/go/to/prod)
+### For more information about the why the costs are the way they are, please see [Production Setup Page](https://frugal-aws.acari.io/go/to/prod)
 
 `;
 
