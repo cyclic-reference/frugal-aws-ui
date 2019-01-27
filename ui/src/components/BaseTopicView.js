@@ -24,8 +24,7 @@ const styles = theme => ({
 });
 
 
-function BaseTopicView({children, classes}) {
-  console.warn(classes.layout);
+function BaseTopicView({children, classes, topic}) {
   return (
     <div className={classes.layout}>
       <Link to={'/'} style={{textDecoration: 'none'}}>
@@ -34,6 +33,12 @@ function BaseTopicView({children, classes}) {
       <div className={classes.postContainer}>
         {children}
       </div>
+      {
+        topic.previousPage ? <Link to={topic.previousPage}>Previous Topic</Link> : null
+      }
+      {
+        topic.nextPage ? <Link to={topic.nextPage}>Next Topic</Link> : null
+      }
       <div>Feeter</div>
       <Link to={'/'} style={{textDecoration: 'none'}}>
         <Fab className={classes.fab}>

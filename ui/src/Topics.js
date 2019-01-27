@@ -21,6 +21,7 @@ const topics = [
     displayImage: Question,
     path: '/what/is/production',
     viewComponent: (WhatIsProd),
+    nextPage: '/how/to/start',
   },
   {
     title: 'Where do I start?',
@@ -30,6 +31,8 @@ const topics = [
     displayImage: GreenLight,
     path: '/how/to/start',
     viewComponent: (WhereToStart),
+    previousPage: '/what/is/production',
+    nextPage: '/develop/local',
   },
   {
     title: 'How do I develop locally?',
@@ -40,6 +43,8 @@ const topics = [
     displayImage: build,
     path: '/develop/local',
     viewComponent: (DevelopLocal),
+    previousPage: '/how/to/start',
+    nextPage: '/go/to/production',
   },
   {
     title: 'How Do I go to Production?',
@@ -50,6 +55,8 @@ const topics = [
     displayImage: cloud,
     path: '/go/to/production',
     viewComponent: (GoToProd),
+    previousPage: '/develop/local',
+    nextPage: '/dolla/dolla/bill/yall',
   },
   {
     title: 'How much is Production?',
@@ -59,6 +66,7 @@ const topics = [
     displayImage: dogecoin,
     path: '/dolla/dolla/bill/yall',
     viewComponent: (PayForProd),
+    previousPage: '/go/to/production',
   },
 ];
 

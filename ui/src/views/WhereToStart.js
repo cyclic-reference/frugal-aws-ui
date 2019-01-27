@@ -17,8 +17,8 @@ const styles = theme => ({
 
 
 
-const WhereToStart = ({classes}) => (
-  <BaseTopicView classes={classes}>
+const WhereToStart = ({classes, topic}) => (
+  <BaseTopicView topic={topic} classes={classes}>
     <div className={classes.thing}>Ello govna</div>
     <Markdown className={classes.markdown}>
       {body}

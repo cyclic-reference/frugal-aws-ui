@@ -17,8 +17,8 @@ const styles = theme => ({
 
 
 
-const DevelopLocal = ({classes}) => (
-  <BaseTopicView classes={classes}>
+const DevelopLocal = ({classes, topic}) => (
+  <BaseTopicView topic={topic} classes={classes}>
     <div className={classes.thing}>Ello govna</div>
     <Markdown className={classes.markdown}>
       {body}
