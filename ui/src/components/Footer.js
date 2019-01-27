@@ -122,7 +122,7 @@ const Footer = props => {
     </footer>
     <div style={{paddingLeft: '1em', color: '#EAEAEA', opacity: 0.25}}>
       <Typography color={"inherit"}>
-        v1.2.1
+        v1.0.0
       </Typography>
     </div>
   </React.Fragment>;

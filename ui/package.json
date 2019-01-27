@@ -1,6 +1,6 @@
 {
-  "name": "acari-ui",
-  "version": "1.2.1",
+  "name": "frugal-aws-ui",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^3.6.2",
