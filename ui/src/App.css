@@ -6,6 +6,11 @@
   height: 100%;
 }
 
+.image-container{
+  text-align: center;
+  margin-bottom: 1em;
+}
+
 .acari-heading {
   background: url(images/hex.png), url(images/hex-right.png) !important;
   background-position: top left, top right !important;

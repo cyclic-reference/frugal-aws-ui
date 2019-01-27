@@ -18,13 +18,16 @@ Given that the above is true, then this means that any user should be able to se
 
 Just having HTTPS is not enough, the certificates have to be **valid** and **trusted**. 
 
+<div class="image-container">
 ![Secure Site](https://raw.githubusercontent.com/cyclic-reference/frugal-aws-ui/master/presentation/images/secure_site.png)
-
+</div>
 Meaning that the issued certificates have not expired and were issued by a trusted certificate entity.
 
 This is an example of what invalid certificate do to a website:
 
+<div class="image-container">
 ![Insecure Site](https://raw.githubusercontent.com/cyclic-reference/frugal-aws-ui/master/presentation/images/bad-https.png)
+</div>
 
 In addition to having HTTPs it also is great if any HTTP communication be automatically redirected to the respective HTTPS communication.
 
@@ -48,15 +51,21 @@ When things do not work as expected, inform the user that such a thing has happe
 
 However, no person has probably ever said, "I like it when I see this, it makes me feel good." when the see this.
 
+<div class="image-container">
 ![404](https://raw.githubusercontent.com/cyclic-reference/frugal-aws-ui/master/presentation/images/404_lame.png)
+</div>
 
 Make error handling fun and informative
 
+<div class="image-container">
 ![404_fun](https://raw.githubusercontent.com/cyclic-reference/frugal-aws-ui/master/presentation/images/404.png)
+</div>
 
 Make sure that if your system has to go down for maintenance, make sure that window of time is handled as well. 
 
+<div class="image-container">
 ![404](https://raw.githubusercontent.com/cyclic-reference/frugal-aws-ui/master/presentation/images/github-maintenance.png)
+</div>
 
 ### Respond Quickly
 

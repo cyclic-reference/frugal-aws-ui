@@ -17,6 +17,16 @@ const options = {
     h4: { component: props => <Typography gutterBottom variant="subtitle1" {...props} /> },
     h5: { component: props => <Typography gutterBottom variant="caption" paragraph {...props} /> },
     p: { component: props => <Typography paragraph {...props} /> },
+    img: {
+      props: {
+        style:{
+          borderWidth: '4px',
+          borderStyle: 'solid',
+          borderColor: 'rgb(34,34,34)',
+          boxShadow: 'rgba(0, 0, 0, 0.15) 0px 0px 10px',
+        },
+      },
+    },
     li: {
       component: withStyles(styles)(({ classes, ...props }) => (
         <li className={classes.listItem}>
