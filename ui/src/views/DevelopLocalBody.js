@@ -40,9 +40,9 @@ Will be accessible from https://compute-app-two.localhost
 The static content will be served by the Express app via the NGINX proxy server.
 The NGINX server will access the spring boot server via the Docker supplied host name: **compute-app-two**
 
-
+<div class="image-container">
 ![Local Architecture](https://raw.githubusercontent.com/cyclic-reference/frugal-aws-ui/master/presentation/images/LOCAL_ARCH.png)
-
+</div>
 
 An example implementation of the schema can be found here:
 

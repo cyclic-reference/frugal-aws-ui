@@ -81,7 +81,9 @@ You can find all of the necessary resources to set up CloudFront and HTTPS in th
 
 ## Diagram of the Cost Optimized AWS Architecture 
 
+<div class="image-container">
 ![Cloud Architecture](https://raw.githubusercontent.com/cyclic-reference/frugal-aws-ui/master/presentation/images/AWS_ARCH.png)
+</div>
 
 An example implementation of the schema can be found here:
 
