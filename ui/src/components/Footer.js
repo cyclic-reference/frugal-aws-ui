@@ -76,7 +76,7 @@ const Footer = props => {
           <Card className={classes.card} elevation={0}>
             <CardContent>
               <Typography color={'inherit'} variant="h6" gutterBottom>
-                Built by Alex Simons?
+                Built by Alex Simons.
               </Typography>
               <Typography color={'inherit'}>
                 Since you are reading this, chances, are I sent you here.
