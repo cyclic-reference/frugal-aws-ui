@@ -68,12 +68,18 @@ Which is no big deal, as certificates will be provided by the Certificate Manage
 
 
 #### What is CloudFront?
-Is basically a CDN for your static content
+Is basically a CDN for your static content.
 All of your content will be put on servers closer to your users, so faster response times!
 CloudFront will be fed by S3, which is just a remote file system.
 Since CloudFront caches your static content. 
 Whenever you want to release new code you have to invalidate those caches.
 This could cost you upwards of $0.1 a month, though I have never exceeded $0.02.
+
+[Here is a quickstart for cloud front.](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/GettingStarted.html)
+You can find all of the necessary resources to set up CloudFront and HTTPS in the link above.
+
+
+## Diagram of the Cost Optimized AWS Architecture 
 
 ![Cloud Architecture](https://raw.githubusercontent.com/cyclic-reference/frugal-aws-ui/master/presentation/images/AWS_ARCH.png)
 
