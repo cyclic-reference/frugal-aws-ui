@@ -83,7 +83,7 @@ const Footer = props => {
                 If you happened to stumble across this site then, "Hi! Nice to meet you!"
               </Typography> <br/>
               <Typography color={'inherit'}>
-                Feel free to say "Hey!" or visit my social sites below.
+                Feel free to browse my sites below.
               </Typography>
             </CardContent>
             <div align="center" className={classes.social}>

@@ -17,7 +17,7 @@ const styles = theme => ({
     bottom: theme.spacing.unit * 2,
     right: theme.spacing.unit * 2,
   },
-  postContainer: {
+  layout: {
     backgroundColor: '#E9E9E9',
     padding: '1em',
     borderRadius: '0.5em',
