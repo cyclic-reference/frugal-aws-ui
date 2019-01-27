@@ -9,7 +9,7 @@ There will be a total of 3 websites in this demonstration project:
 - A Express Application
 
 ### Entry Point
-The entry point to all of our application will be the NGINX server.
+The entry point to all of our applications will be the NGINX server.
 The server will be configured such that all Client-Side communications will be in HTTPS.
 
 #### What is NGINX?
