@@ -18,16 +18,12 @@ Given that the above is true, then this means that any user should be able to se
 
 Just having HTTPS is not enough, the certificates have to be **valid** and **trusted**. 
 
-<div class="image-container">
 ![Secure Site](https://raw.githubusercontent.com/cyclic-reference/frugal-aws-ui/master/presentation/images/secure_site.png)
-</div>
 Meaning that the issued certificates have not expired and were issued by a trusted certificate entity.
 
 This is an example of what invalid certificate do to a website:
 
-<div class="image-container">
 ![Insecure Site](https://raw.githubusercontent.com/cyclic-reference/frugal-aws-ui/master/presentation/images/bad-https.png)
-</div>
 
 In addition to having HTTPs it also is great if any HTTP communication be automatically redirected to the respective HTTPS communication.
 

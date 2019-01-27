@@ -12,12 +12,12 @@ const styles = theme => ({
 
 const options = {
   overrides: {
-    h1: {component: props => <Typography gutterBottom variant="h2" {...props} />},
-    h2: {component: props => <Typography gutterBottom variant="h3" {...props} />},
-    h3: {component: props => <Typography gutterBottom variant="h4" {...props} />},
-    h4: {component: props => <Typography gutterBottom variant="subtitle1" {...props} />},
-    h5: {component: props => <Typography gutterBottom variant="caption" paragraph {...props} />},
-    p: {component: props => <Typography paragraph {...props} />},
+    h1: {component: props => <Typography color={'inherit'} gutterBottom variant="h2" {...props} />},
+    h2: {component: props => <Typography color={'inherit'} gutterBottom variant="h3" {...props} />},
+    h3: {component: props => <Typography color={'inherit'} gutterBottom variant="h4" {...props} />},
+    h4: {component: props => <Typography color={'inherit'} gutterBottom variant="subtitle1" {...props} />},
+    h5: {component: props => <Typography color={'inherit'} gutterBottom variant="caption" paragraph {...props} />},
+    p: {component: props => <Typography color={'inherit'} paragraph {...props} />},
     a: {
       component: props => {
         if (props.children && props.children.filter(child => child.indexOf && child.indexOf('~!@') > -1).length > 0) {
@@ -46,7 +46,7 @@ const options = {
     li: {
       component: withStyles(styles)(({classes, ...props}) => (
         <li className={classes.listItem}>
-          <Typography component="span" {...props} />
+          <Typography color={"inherit"} component="span" {...props} />
         </li>
       )),
     },

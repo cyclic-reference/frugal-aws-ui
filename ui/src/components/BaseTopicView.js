@@ -12,15 +12,16 @@ const styles = theme => ({
     marginTop: theme.spacing.unit,
   },
   fab: {
-    backgroundColor: yellow[500],
-    color: theme.palette.grey[900],
     position: 'fixed',
     bottom: theme.spacing.unit * 2,
     right: theme.spacing.unit * 2,
   },
+  postContainer: {
+    color: theme.palette.grey[800]
+  },
   layout: {
-    backgroundColor: '#E9E9E9',
-    padding: '1em',
+    backgroundColor: yellow[700],
+    padding: '1.5em',
     borderRadius: '0.5em',
     boxShadow: '0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);',
   }
@@ -60,7 +61,7 @@ function BaseTopicView({children, classes, topic}) {
         }
       </div>
       <Link to={'/'} style={{textDecoration: 'none'}}>
-        <Fab className={classes.fab} title={'Frugal AWS Dev Home'}>
+        <Fab classes={'primary'} className={classes.fab} title={'Frugal AWS Dev Home'}>
           <Home/>
         </Fab>
       </Link>

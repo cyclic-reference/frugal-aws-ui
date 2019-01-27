@@ -1,5 +1,5 @@
 .backdrop {
-  background: url('images/stripe.png') fixed, linear-gradient(#f9a825,#f9a825, rgba(225, 226, 40, 0.83));
+  background: url('images/stripe.png') fixed, #f9a825;
 }
 
 #root, html, body{

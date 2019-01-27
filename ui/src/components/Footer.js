@@ -33,8 +33,6 @@ const styles = theme => ({
   },
   socialLink: {
     marginRight: '0.5em',
-    backgroundColor: yellow[600],
-    color: theme.palette.grey[900],
   },
   card: {
     color: theme.palette.grey[200],
@@ -90,7 +88,9 @@ const Footer = props => {
               <GridList cellHeight={64} className={classes.gridList} cols={socialLinks.length}>
                 {socialLinks.map(socialLink => (
                   <GridListTile key={socialLink.title} cols={1}>
-                    <Fab className={classes.socialLink}
+                    <Fab
+                      classes={'primary'}
+                      className={classes.socialLink}
                          title={socialLink.title}
                          href={socialLink.link}
                          target={'_blank'}>
