@@ -3,13 +3,9 @@ import React from "react";
 import withStyles from "@material-ui/core/es/styles/withStyles";
 import Markdown from "../components/Markdown";
 import body from './WhatIsProdBody';
-import {Link} from "react-router-dom";
 
 
 const styles = theme => ({
-  thing: {
-    color: 'red'
-  },
   markdown: {
     padding: `${theme.spacing.unit * 3}px 0`,
     whiteSpace: 'preserve',
@@ -20,7 +16,6 @@ const styles = theme => ({
 
 const WhatIsProd = ({classes, topic}) => (
   <BaseTopicView topic={topic} classes={classes}>
-    <div className={classes.thing}>Ello govna</div>
     <Markdown className={classes.markdown}>
       {body}
     </Markdown>

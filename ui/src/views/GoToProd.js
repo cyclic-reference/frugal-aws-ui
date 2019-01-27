@@ -6,9 +6,6 @@ import body from './GoToProdBody';
 
 
 const styles = theme => ({
-  thing: {
-    color: 'red'
-  },
   markdown: {
     padding: `${theme.spacing.unit * 3}px 0`,
     whiteSpace: 'preserve',
@@ -19,7 +16,6 @@ const styles = theme => ({
 
 const GoToProd = ({classes, topic}) => (
   <BaseTopicView topic={topic} classes={classes}>
-    <div className={classes.thing}>Ello govna</div>
     <Markdown className={classes.markdown}>
       {body}
     </Markdown>
