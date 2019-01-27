@@ -51,21 +51,15 @@ When things do not work as expected, inform the user that such a thing has happe
 
 However, no person has probably ever said, "I like it when I see this, it makes me feel good." when the see this.
 
-<div class="image-container">
 ![404](https://raw.githubusercontent.com/cyclic-reference/frugal-aws-ui/master/presentation/images/404_lame.png)
-</div>
 
 Make error handling fun and informative
 
-<div class="image-container">
 ![404_fun](https://raw.githubusercontent.com/cyclic-reference/frugal-aws-ui/master/presentation/images/404.png)
-</div>
 
 Make sure that if your system has to go down for maintenance, make sure that window of time is handled as well. 
 
-<div class="image-container">
 ![404](https://raw.githubusercontent.com/cyclic-reference/frugal-aws-ui/master/presentation/images/github-maintenance.png)
-</div>
 
 ### Respond Quickly
 
