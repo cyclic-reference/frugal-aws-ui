@@ -1,5 +1,5 @@
 const markdown = `
-## Setting up a strategy.
+## Setting up a cost optimized strategy.
 
 - Organize all of your projects.
 - Install Docker on your local machine

@@ -26,7 +26,8 @@ const topics = [
   {
     title: 'Where do I start?',
     exerpt:
-      'You now have a good fundamental understanding of what a "good" production environment looks like. The next step in your journey is laying out a strategy and figuring out starting place to begin your trip.',
+      'Now that a you have a fundamental understanding of what a "good" production environment looks like. ' +
+      'The next step in your journey is laying out a cost optimized strategy.',
     color: green[500],
     displayImage: GreenLight,
     path: '/how/to/start',
@@ -37,8 +38,8 @@ const topics = [
   {
     title: 'How do I develop locally?',
     exerpt:
-      'Theory and practice are two separate thing in my mind. Just knowing what needs to happen is half of the battle. ' +
-      'This section is devoted in showing how to start putting these block together.',
+      'Theory and practice are two separate things, in my mind. Just knowing what needs to happen is half of the battle. ' +
+      'This section is devoted in showing how to start putting these building blocks together.',
     color: blue[500],
     displayImage: build,
     path: '/develop/local',
@@ -49,8 +50,8 @@ const topics = [
   {
     title: 'How Do I go to Production?',
     exerpt:
-      'Thanks to good strategy, the fundamental concepts that helped us develop locally can also be applied to most of our production. ' +
-      'Here we will learn how to get our production into AWS while drawing on our past knowledge to guide us along.',
+      'The fundamental concepts that helped us develop locally can also be applied to most of our production, thanks to good strategy. ' +
+      'Here we will learn how to get our production into AWS while drawing on our past knowledge to guide us along on the journey.',
     color: purple[500],
     displayImage: cloud,
     path: '/go/to/production',
@@ -60,8 +61,8 @@ const topics = [
   },
   {
     title: 'How much is Production?',
-    exerpt: 'Money talks, throughout the previous section we discussed where we can optimize our costs while deploying to production. ' +
-      'Here we recap what can be expected to pay while maintaining our production environment.',
+    exerpt: 'Money talks, the previous section discussed where we can optimize our costs when supporting a production environment. ' +
+      'Here we recap how much costs can be expected to maintaining our production environment.',
     color: red[500],
     displayImage: dogecoin,
     path: '/dolla/dolla/bill/yall',
