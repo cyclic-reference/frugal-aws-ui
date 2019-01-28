@@ -37,9 +37,11 @@ function BaseTopicView({children, classes, topic}) {
           Go Home
         </Button>
       </Link>
+      <hr style={{marginBottom: 0}}/>
       <div className={classes.postContainer}>
         {children}
       </div>
+      <hr/>
       <div style={{display: 'flex'}}>
         {
           topic.previousPage ?

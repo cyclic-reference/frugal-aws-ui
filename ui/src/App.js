@@ -14,6 +14,7 @@ import MenuNavigation from "./components/MenuNavigation";
 import Shrug from './images/shrug_shadow.png';
 import grey from "@material-ui/core/es/colors/grey";
 import yellow from "@material-ui/core/es/colors/yellow";
+import ScrollToTop from "./components/ScrollToTheTop";
 
 const styles = theme => ({
   layout: {
@@ -83,46 +84,50 @@ const App = props => {
     <React.Fragment>
       <CssBaseline/>
       <MuiThemeProvider theme={theme}>
-        <Router>
-          <div className={"backdrop"}>
-            <AppBar position={"sticky"} className={classes.header}>
-              <Toolbar>
-                <MenuNavigation topics={Topics}/>
-                <Typography
-                  component="h2"
-                  variant="h5"
-                  color="inherit"
-                  noWrap
-                  className={classes.toolbarTitle}
-                >
-                  The Frugal AWS Dev
-                </Typography>
-              </Toolbar>
-            </AppBar>
-            <Switch>
-              <Route path={'/'} exact component={() => <Landing classes={classes} Topics={Topics}/>}/>
-              {Topics
-                .filter(topic => !!topic.viewComponent)
-                .map(topic => <Route key={topic.path} path={topic.path} component={props=><topic.viewComponent {...props} topic={topic} classes={classes}/>}/>)}
-              <Route component={() => <div>
-                <div className={classes.shrugContainer}>
-                  <img
-                    src={Shrug}
-                    alt="¯\_(ツ)_/¯"/>
-                </div>
-                <Link to={'/'} style={{textDecoration: 'none'}}>
-                  <div className={classes.goHomeContainer}>
-                    <h1>Hmmm, I can't seem to find that...</h1>
-                    <div className="btn btn-primary">
-                      Go Home
-                    </div>
+        <Router onUpdate={() => window.scrollTo(0, 0)}>
+          <ScrollToTop>
+            <div className={"backdrop"}>
+              <AppBar position={"sticky"} className={classes.header}>
+                <Toolbar>
+                  <MenuNavigation topics={Topics}/>
+                  <Typography
+                    component="h2"
+                    variant="h5"
+                    color="inherit"
+                    noWrap
+                    className={classes.toolbarTitle}
+                  >
+                    The Frugal AWS Dev
+                  </Typography>
+                </Toolbar>
+              </AppBar>
+              <Switch>
+                <Route path={'/'} exact component={() => <Landing classes={classes} Topics={Topics}/>}/>
+                {Topics
+                  .filter(topic => !!topic.viewComponent)
+                  .map(topic => <Route key={topic.path} path={topic.path}
+                                       component={props => <topic.viewComponent {...props} topic={topic}
+                                                                                classes={classes}/>}/>)}
+                <Route component={() => <div>
+                  <div className={classes.shrugContainer}>
+                    <img
+                      src={Shrug}
+                      alt="¯\_(ツ)_/¯"/>
                   </div>
-                </Link>
-              </div>
-              }/>
-            </Switch>
-            <Footer/>
-          </div>
+                  <Link to={'/'} style={{textDecoration: 'none'}}>
+                    <div className={classes.goHomeContainer}>
+                      <h1>Hmmm, I can't seem to find that...</h1>
+                      <div className="btn btn-primary">
+                        Go Home
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+                }/>
+              </Switch>
+              <Footer/>
+            </div>
+          </ScrollToTop>
         </Router>
       </MuiThemeProvider>
     </React.Fragment>

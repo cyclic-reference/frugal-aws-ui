@@ -8,6 +8,8 @@ Here are some characteristics that great production environments contain:
   - Graceful Error Handling
   - Respond Quickly
   - Path Support
+
+  
   
 ---
 
