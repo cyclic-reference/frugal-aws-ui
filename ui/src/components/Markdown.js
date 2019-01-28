@@ -15,8 +15,8 @@ const options = {
     h1: {component: props => <Typography color={'inherit'} gutterBottom variant="h2" {...props} />},
     h2: {component: props => <Typography color={'inherit'} gutterBottom variant="h3" {...props} />},
     h3: {component: props => <Typography color={'inherit'} gutterBottom variant="h4" {...props} />},
-    h4: {component: props => <Typography color={'inherit'} gutterBottom variant="subtitle1" {...props} />},
-    h5: {component: props => <Typography color={'inherit'} gutterBottom variant="caption" paragraph {...props} />},
+    h4: {component: props => <Typography color={'inherit'} gutterBottom variant="h5" {...props} />},
+    h5: {component: props => <Typography color={'inherit'} gutterBottom variant="h6" paragraph {...props} />},
     p: {component: props => <Typography color={'inherit'} paragraph {...props} />},
     a: {
       component: props => {
