@@ -75,8 +75,11 @@ Follow the following steps listed below:
 
 ---
 
-# ?
-### Profit!
+# <div style="text-align: center">?</div>
+
+---
+
+### <div style="text-align: center">Profit!</div>
 
 `;
 
