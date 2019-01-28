@@ -1,12 +1,15 @@
 const markdown = `
 ### Example Production Project Setup
-There will be a total of 3 websites:
 
-- A React Web Application
-- A Spring Boot Application
-- A Express Application
+There will be two main pieces two the production setup.
+
+ - An Entry Point: a place where all of the projects can be accessible from
+ - Applications: All of your projects that you devoted much care into building.
+
+---
 
 ### Entry Point
+
 The entry point to all of our applications will be provided by the Route 53 service.
 The combinations of services and servers will need to be configured such that all Client-Side communications will remain in HTTPS.
 Unlike local development, there will be multiple configurations across services that need to happen. 
@@ -56,6 +59,16 @@ Or you could just go Hardcore mode and get your certs on your EC2 instance via S
 This server will also handle all graceful failure pages that the user may see while interacting with your domain.
 This means that Route 53 needs to have a record that points \`*.sample-domain.com\` to the EC2's IP address (the one running NGINX and your compute applications).
 
+---
+
+### The Applications
+
+There will still be a total of 3 websites:
+
+- A React Web Application
+- A Spring Boot Application
+- A Express Application
+
 #### The Spring and Express Application
 Will remain the same as the local setup.
 
@@ -65,7 +78,6 @@ It has way faster response times and is way cheaper than the underpowered and ex
 
 This is another entrypoint to your application that require secure communications.
 Which is no big deal, as certificates will be provided by the Certificate Manager at no charge to you!
-
 
 #### What is CloudFront?
 Is basically a CDN for your static content.
@@ -78,6 +90,7 @@ This could cost you upwards of $0.1 a month, though I have never exceeded $0.02.
 [Here is a quickstart for cloud front.](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/GettingStarted.html)
 You can find all of the necessary resources to set up CloudFront and HTTPS in the link above.
 
+---
 
 ## Diagram of the Cost Optimized AWS Architecture 
 

@@ -2,11 +2,13 @@ const markdown = `
 ## Replicate Production on Local Machine
 
 ### Example Project Setup
-There will be a total of 3 websites in this demonstration project:
 
-- A React Web Application
-- A Spring Boot Application
-- A Express Application
+There will be two main pieces two the production setup.
+
+ - An Entry Point: a place where all of the projects can be accessible from
+ - Applications: All of your projects that you devoted much care into building.
+
+---
 
 ### Entry Point
 The entry point to all of our applications will be the NGINX server.
@@ -26,6 +28,16 @@ Allowing for a single server to handle requests for many domains, which means th
 
 This server will also handle all graceful failure pages that the user may see while interacting with your domain.
 
+---
+
+### Project Applications
+
+In this demonstration, there will be a total of 3 websites:
+
+  - A React Web Application
+  - A Spring Boot Application
+  - A Express Application
+
 #### The React Application
 Will be accessible from ** https://static-site.localhost~!@ **.
 The static content will be served by the NGINX server
@@ -39,6 +51,10 @@ The NGINX server will access the spring boot server via the Docker supplied host
 Will be accessible from ** https://compute-app-two.localhost~!@ **.
 The static content will be served by the Express app via the NGINX proxy server.
 The NGINX server will access the spring boot server via the Docker supplied host name: **compute-app-two**
+
+---
+
+## Diagram of the Cost Optimized Local Architecture
 
 ![Local Architecture](https://raw.githubusercontent.com/cyclic-reference/frugal-aws-ui/master/presentation/images/LOCAL_ARCH.png)
 

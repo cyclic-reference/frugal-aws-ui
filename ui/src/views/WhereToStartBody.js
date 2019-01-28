@@ -1,5 +1,5 @@
 const markdown = `
-## How Do I do all of that stuff?
+## Setting up a strategy.
 
 - Organize all of your projects.
 - Install Docker on your local machine
@@ -7,6 +7,7 @@ const markdown = `
 - Combine the above
 - Profit!
 
+---
 
 ### Organize all of your projects.
 
@@ -24,6 +25,8 @@ These are normally accessed from \`localhost:8080\` or something like that.
 Static content may or may not be served by these service(s) as well
 
 **The distinction between these two categories is the amount of $$ you will spend*
+
+---
 
 ### Install Docker on your local machine
 
@@ -54,9 +57,13 @@ Docker is supported on most major Operating Systems.
 
 Please see the Docker [compatibility matrix](https://success.docker.com/article/compatibility-matrix) for more information.
 
+---
+
 ### Acquire AWS Account
 
 [Here is a link to create a free AWS account.](https://portal.aws.amazon.com/billing/signup?nc2=h_ct&src=header_signup&redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation#/start)
+
+---
 
 ### Combine the above
 
@@ -65,6 +72,8 @@ Follow the following steps listed below:
 1. [Set up the local production environment](https://frugal-aws.acari.io/develop/local)
 1. [Send it to the cloud!!](https://frugal-aws.acari.io/go/to/production)
 
+
+---
 
 # ?
 ### Profit!
