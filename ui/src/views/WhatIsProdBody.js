@@ -53,7 +53,7 @@ If you already have this down, good for you! However still be sure to check it o
 
 When things do not work as expected, inform the user that such a thing has happened.
 
-However, no person has probably ever said, "I like it when I see this, it makes me feel good." when the see this.
+However, no person has probably ever said, "I like it when I see this, it makes me feel good." when they see this.
 
 ![404](https://raw.githubusercontent.com/cyclic-reference/frugal-aws-ui/master/presentation/images/404_lame.png)
 

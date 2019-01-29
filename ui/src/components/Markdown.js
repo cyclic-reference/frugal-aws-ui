@@ -24,9 +24,9 @@ const options = {
           return <span>{props.href.substring(0, props.href.length - 3)}</span>
         } else {
           return <a {...props} target={"_blank"}>
-            <Button variant={"contained"}
+            <Button variant={"outlined"}
                     size='medium'
-                    color='primary'>
+                    color='default'>
               {props.children}
             </Button></a>;
         }
