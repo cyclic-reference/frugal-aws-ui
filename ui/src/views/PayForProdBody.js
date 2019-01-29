@@ -9,7 +9,7 @@ const markdown = `
 - CloudFront: $0.10/month (Free For 12-Months, excluding invalidations)
 - S3: $0.0/month (Free For 12-Months)
 
-> You can support your own prod for about $2.00 a month
+> You can support your own prod for about $2.00 a month, for a year.
 
 [See the AWS Free-Tier page for limits and usage.](https://aws.amazon.com/free/free-tier/)
 

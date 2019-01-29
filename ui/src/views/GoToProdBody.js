@@ -20,7 +20,7 @@ Rather than just having the SSL be delegated by a single service.
 This service is responsible for routing all of your network traffic across your hosted zone
 such as \`example.com\`
 
-This service will cost you $0.50 a month to run a hosted zone.
+>This service will cost you $0.50 a month to run a hosted zone.
 Plus a annual cost for domain renewal, which depends on what you choose ($12.00 a year for .com)
 
 #### EC2
@@ -34,7 +34,7 @@ Super easy instance setup for Docker CE can be found [here](https://docs.docker.
 
 EC2 is the most expensive service you will be interacting with.
 
-It cost under $10 a month for a single micro instance to run.
+>It cost under $10 a month for a single micro instance to run.
 You will also pay just under $3.00 for CloudWatch (which is a logging service).
 
 #### NGINX Configuration
@@ -83,7 +83,8 @@ Which is no big deal, as certificates will be provided by the Certificate Manage
 Is basically a CDN for your static content.
 All of your content will be put on servers closer to your users, so faster response times!
 CloudFront will be fed by S3, which is just a remote file system.
-Since CloudFront caches your static content. 
+
+>Since CloudFront caches your static content. 
 Whenever you want to release new code you have to invalidate those caches.
 This could cost you upwards of $0.1 a month, though I have never exceeded $0.02.
 
