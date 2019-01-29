@@ -38,7 +38,6 @@ class MenuNavigation extends React.Component {
   };
 
 
-
   toggleDrawer = (open) => () => {
     this.setState({
       drawerOpen: open,
@@ -47,7 +46,7 @@ class MenuNavigation extends React.Component {
 
   render() {
     const {classes, topics} = this.props;
-    const menuTopics = topics.reduce((a,b)=>{
+    const menuTopics = topics.reduce((a, b) => {
       a.push(b);
       return a;
     }, [
@@ -61,14 +60,13 @@ class MenuNavigation extends React.Component {
       <div className={classes.fullList}>
         <List>
           {menuTopics.map((topic, index) => (
-            <Link key={topic.title} to={topic.path} style={{textDecoration: 'none'}}>
-              <ListItem button style={{backgroundColor: index % 2 === 0 ? '#f6f6f6': 'white'}}>
-                <ListItemIcon><ReactSVG
-                  svgStyle={{width: '50px', height: '50px'}}
-                  src={topic.displayImage}/></ListItemIcon>
-                <ListItemText primary={topic.title}/>
-              </ListItem>
-            </Link>
+            topic.path ?
+              (<Link key={topic.title} to={topic.path} style={{textDecoration: 'none'}}>
+                {this.getListItem(index, topic)}
+              </Link>) :
+              (<a key={topic.title} href={topic.href} target={'_blank'} style={{textDecoration: 'none'}}>
+                {this.getListItem(index, topic)}
+              </a>)
           ))}
         </List>
         <Divider/>
@@ -94,6 +92,15 @@ class MenuNavigation extends React.Component {
         </Drawer>
       </div>
     );
+  }
+
+  getListItem(index, topic) {
+    return <ListItem button style={{backgroundColor: index % 2 === 0 ? '#f6f6f6' : 'white'}}>
+      <ListItemIcon><ReactSVG
+        svgStyle={{width: '50px', height: '50px'}}
+        src={topic.displayImage}/></ListItemIcon>
+      <ListItemText primary={topic.title}/>
+    </ListItem>;
   }
 }
 

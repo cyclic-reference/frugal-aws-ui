@@ -81,13 +81,26 @@ class TopicCard extends React.Component {
           </GridList>
         </CardContent>
         <CardActions className={classes.actions} disableActionSpacing>
-          <Link to={topic.path} style={{textDecoration: 'none'}}>
-            <Button variant={"outlined"}
-                    size='medium'
-                    color='primary'>
-              Read More
-            </Button>
-          </Link>
+          {
+            topic.path ? (<Link to={topic.path} style={{textDecoration: 'none'}}>
+              <Button variant={"contained"}
+                      size='medium'
+                      color='primary'>
+                Read More
+              </Button>
+            </Link>) : (
+              <a href={topic.href}
+                 target={'_blank'}
+                 style={{textDecoration: 'none'}}>
+                <Button variant={"contained"}
+                        size='medium'
+                        color='primary'>
+                  {topic.buttonText ? topic.buttonText: 'Read More'}
+                </Button>
+              </a>
+            )
+          }
+
         </CardActions>
       </Card>
     );
