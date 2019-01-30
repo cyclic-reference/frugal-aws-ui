@@ -24,7 +24,7 @@ Projects that run on or are themselves servers.
 These are normally accessed from \`localhost:8080\` or something like that.
 Static content may or may not be served by these service(s) as well
 
-**The distinction between these two categories is the amount of $$ you will spend*
+**The distinction between these two categories is the amount of $$ you will spend**
 
 ---
 
