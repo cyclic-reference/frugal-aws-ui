@@ -21,15 +21,18 @@ If you want to read more about why HTTPS is preferred over HTTP please see [this
 Given that the above is true, then this means that any user should be able to see the secure lock whenever they visit anything on your domain.
 
 Just having HTTPS is not enough, the certificates have to be **valid** and **trusted**. 
+This means that the issued certificates have not expired and were issued by a trusted certificate entity.
 
+Here is an example of what a good HTTPS connection looks like:
+ 
 ![Secure Site](https://raw.githubusercontent.com/cyclic-reference/frugal-aws-ui/master/presentation/images/secure_site.png)
-Meaning that the issued certificates have not expired and were issued by a trusted certificate entity.
 
 This is an example of what invalid certificate do to a website:
 
+
 ![Insecure Site](https://raw.githubusercontent.com/cyclic-reference/frugal-aws-ui/master/presentation/images/bad-https.png)
 
-In addition to having HTTPs it also is great if any HTTP communication be automatically redirected to the respective HTTPS communication.
+In addition to having HTTPS, it also is great if any HTTP communication be automatically redirected to the respective HTTPS communication.
 
 > Notice how when http://google.com~!@ is executed it automatically becomes https://google.com~!@.
 
@@ -74,7 +77,7 @@ Always respond to the user quickly.
 - Fail Fast
 - Succeed Immediately
 
-Whether the system fails or succeeds do not make the user wait to find out.
+Whether the system fails or succeeds, do not make the user wait to find out.
 
 ---
 
