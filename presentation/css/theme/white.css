@@ -22,12 +22,12 @@ body {
 
 ::selection {
   color: #fff;
-  background: #fcdaa1;
+  background: #98bdef;
   text-shadow: none; }
 
 ::-moz-selection {
   color: #fff;
-  background: #fcdaa1;
+  background: #98bdef;
   text-shadow: none; }
 
 .reveal .slides section,
@@ -209,20 +209,20 @@ body {
  * LINKS
  *********************************************/
 .reveal a {
-  color: #f9a825;
+  color: #dd7928;
   text-decoration: none;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
   transition: color .15s ease; }
 
 .reveal a:hover {
-  color: #fbc66f;
+  color: #6ca0e8;
   text-shadow: none;
   border: none; }
 
 .reveal .roll span:after {
   color: #fff;
-  background: #cc8006; }
+  background: #1a53a1; }
 
 /*********************************************
  * IMAGES
@@ -244,21 +244,21 @@ body {
 
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
-  border-color: #f9a825;
+  border-color: #2a76dd;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
 
 /*********************************************
  * NAVIGATION CONTROLS
  *********************************************/
 .reveal .controls {
-  color: #f9a825; }
+  color: #dd9b2a; }
 
 /*********************************************
  * PROGRESS BAR
  *********************************************/
 .reveal .progress {
   background: rgba(0, 0, 0, 0.2);
-  color: #f9a825; }
+  color: #2a76dd; }
 
 .reveal .progress span {
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
