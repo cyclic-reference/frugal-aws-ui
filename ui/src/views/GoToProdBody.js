@@ -1,10 +1,10 @@
 const markdown = `
 ### Example Production Project Setup
 
-There will be two main pieces two the production setup.
+There will be two main pieces to the production setup.
 
- - An Entry Point: a place where all of the projects can be accessible from
- - Applications: All of your projects that you devoted much care into building.
+ - **An Entry Point**: a place where all of the projects can be accessible from
+ - **Applications**: All of your projects that you devoted much care into building.
 
 ---
 
@@ -26,7 +26,7 @@ Plus a annual cost for domain renewal, which depends on what you choose ($12.00 
 #### EC2
 
 The Elastic Cloud Compute service will be used for our servers. 
-Meaning that it will run our compute apps and the NGINX.
+Meaning that it will run our compute apps and the NGINX server.
 
 While Elastic Block Store (EBS) will save our instances data to a file system.
 
@@ -50,11 +50,11 @@ So https://compute-app-one.localhost~!@  will turn into https://compute-app-one.
 
 The most easy way to get your Let's Encrypt Certificates will be by running the [certbot](https://github.com/certbot/certbot/tree/master/certbot-dns-route53) on your local machine.
 
-This will require the AWS cli and access credentials to your account to be set up.
+This will require the [AWS cli](https://aws.amazon.com/cli/) and access credentials to your account to be set up.
 
-This will require also require for you to have Private Docker Image Repositories.
+This could also require for you to have Private [Docker Image Repositories](https://hub.docker.com/signup).
 Which will run you $7.00 a month and gives you 6 Private Repositories.
-Or you could just go Hardcore mode and get your certs on your EC2 instance via SCP and build your image locally.
+You could just go Hardcore mode and get your certs on your EC2 instance via SCP and build your image locally on the compute instance.
 
 This server will also handle all graceful failure pages that the user may see while interacting with your domain.
 This means that Route 53 needs to have a record that points \`*.sample-domain.com\` to the EC2's IP address (the one running NGINX and your compute applications).
@@ -80,7 +80,7 @@ This is another entrypoint to your application that require secure communication
 Which is no big deal, as certificates will be provided by the Certificate Manager at no charge to you!
 
 #### What is CloudFront?
-Is basically a CDN for your static content.
+Is basically a [CDN](https://www.cloudflare.com/learning/cdn/what-is-a-cdn/) for your static content.
 All of your content will be put on servers closer to your users, so faster response times!
 CloudFront will be fed by S3, which is just a remote file system.
 

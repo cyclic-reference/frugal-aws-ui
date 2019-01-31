@@ -18,7 +18,7 @@ The server will be configured such that all Client-Side communications will be i
 NGINX is open source software for serving static content, proxying requests, and more things.
 Static content and proxying are just the features that we will be focused on right now.
 
-###### NGINX Configuration
+##### NGINX Configuration
 
 Self-Signed certificates can be used for initially setting up secured communications.
 Which will later be replaced by free, trusted [Let's Encrypt](https://letsencrypt.org/) certificates.
