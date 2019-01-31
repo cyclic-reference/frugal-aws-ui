@@ -63,7 +63,7 @@ const topics = [
   },
   {
     title: 'Do you like sides?',
-    exerpt: 'Presentations are great, the can condense most of what you want to say in just a few slides.' +
+    exerpt: 'Presentations are great, they can condense most of what you want to say in just a few slides.' +
       'You will be able to find all of the topics above in a convenient slide show format.',
     displayImage: presentation,
     buttonText: 'View Slides',
