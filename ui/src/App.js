@@ -103,6 +103,11 @@ const App = props => {
               </AppBar>
               <Switch>
                 <Route path={'/'} exact component={() => <Landing classes={classes} Topics={Topics}/>}/>
+                {Topics
+                  .filter(topic => !!topic.viewComponent)
+                  .map(topic => <Route key={topic.path} path={topic.path}
+                                       component={props => <topic.viewComponent {...props} topic={topic}
+                                                                                classes={classes}/>}/>)}
                 <Route component={() => <div>
                   <div className={classes.shrugContainer}>
                     <img
@@ -119,11 +124,6 @@ const App = props => {
                   </Link>
                 </div>
                 }/>
-                {Topics
-                  .filter(topic => !!topic.viewComponent)
-                  .map(topic => <Route key={topic.path} path={topic.path}
-                                       component={props => <topic.viewComponent {...props} topic={topic}
-                                                                                classes={classes}/>}/>)}
               </Switch>
               <Footer/>
             </div>
