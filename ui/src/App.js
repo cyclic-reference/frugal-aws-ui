@@ -12,7 +12,6 @@ import Topics from './Topics';
 import Landing from "./components/Landing";
 import MenuNavigation from "./components/MenuNavigation";
 import Shrug from './images/shrug_shadow.png';
-import grey from "@material-ui/core/es/colors/grey";
 import yellow from "@material-ui/core/es/colors/yellow";
 import ScrollToTop from "./components/ScrollToTheTop";
 
