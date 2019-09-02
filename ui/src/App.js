@@ -12,7 +12,6 @@ import Topics from './Topics';
 import Landing from "./components/Landing";
 import MenuNavigation from "./components/MenuNavigation";
 import Shrug from './images/shrug_shadow.png';
-import grey from "@material-ui/core/es/colors/grey";
 import yellow from "@material-ui/core/es/colors/yellow";
 import ScrollToTop from "./components/ScrollToTheTop";
 
@@ -103,6 +102,11 @@ const App = props => {
               </AppBar>
               <Switch>
                 <Route path={'/'} exact component={() => <Landing classes={classes} Topics={Topics}/>}/>
+                {Topics
+                  .filter(topic => !!topic.viewComponent)
+                  .map(topic => <Route key={topic.path} exact path={topic.path}
+                                       component={props => <topic.viewComponent {...props} topic={topic}
+                                                                                classes={classes}/>}/>)}
                 <Route component={() => <div>
                   <div className={classes.shrugContainer}>
                     <img
@@ -119,11 +123,6 @@ const App = props => {
                   </Link>
                 </div>
                 }/>
-                {Topics
-                  .filter(topic => !!topic.viewComponent)
-                  .map(topic => <Route key={topic.path} path={topic.path}
-                                       component={props => <topic.viewComponent {...props} topic={topic}
-                                                                                classes={classes}/>}/>)}
               </Switch>
               <Footer/>
             </div>

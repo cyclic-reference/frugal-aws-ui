@@ -69,6 +69,7 @@ const topics = [
     buttonText: 'View Slides',
     href: 'https://frugal-aws.acari.io/presentation',
     viewComponent: (PayForProd),
+    path: 'yeet',
   },
 ];
 

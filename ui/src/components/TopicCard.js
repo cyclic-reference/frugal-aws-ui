@@ -82,7 +82,7 @@ class TopicCard extends React.Component {
         </CardContent>
         <CardActions className={classes.actions} disableActionSpacing>
           {
-            topic.path ? (<Link to={topic.path} style={{textDecoration: 'none'}}>
+            topic.path && topic.path !== 'yeet' ? (<Link to={topic.path} style={{textDecoration: 'none'}}>
               <Button variant={"contained"}
                       size='medium'
                       color='primary'>
