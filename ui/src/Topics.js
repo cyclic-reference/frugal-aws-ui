@@ -12,7 +12,7 @@ import PayForProd from "./views/PayForProd";
 
 const topics = [
   {
-    title: 'What is Production?',
+    title: 'What is production?',
     exerpt: 'This section will explain the positive traits that are exhibited by well established production environments.',
     displayImage: Question,
     path: '/what/is/production',

@@ -36,7 +36,8 @@ const styles = theme => ({
   topicDivider: {
     opacity: 0.1,
     color: '#262b30',
-    margin: '2rem',
+    maxWidth: '15rem',
+    margin: '4rem auto',
   },
   header: {
     backgroundColor: '#f9a825',

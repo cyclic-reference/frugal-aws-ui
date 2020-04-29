@@ -9,9 +9,8 @@ import {Link} from "react-router-dom";
 const styles = theme => ({
   card: {},
   media: {
-    maxHeight: 150,
-    maxWidth: 150,
-    minHeight: 150,
+    width: 150,
+    height: 150,
     marginTop: '1rem',
     backgroundSize: 'contain',
   },
@@ -32,6 +31,11 @@ const styles = theme => ({
       marginRight: -8,
     },
   },
+  mediaContainer: {
+    width: 150,
+    height: 150,
+    marginRight: '2rem'
+  },
   expandOpen: {
     transform: 'rotate(180deg)',
   },
@@ -47,7 +51,11 @@ const styles = theme => ({
     display: 'flex',
   },
   excerpt:{
-    maxWidth: '350px',
+    maxWidth: '500px',
+    color: '#b2b2b4',
+    fontSize: '20px',
+    lineHeight: '2rem',
+    fontWeight: 400,
   }
 });
 
@@ -59,6 +67,14 @@ class TopicCard extends React.Component {
     return (
       <div className={classes.card}>
         <div className={classes.content}>
+          <div className={classes.mediaContainer}>
+            <img
+              alt={topic.title}
+              className={classes.media}
+              src={topic.displayImage}
+              title={topic.title}
+            />
+          </div>
           <div>
             {
               topic.path ? (<Link to={topic.path} style={{textDecoration: 'none'}}>
@@ -76,17 +92,11 @@ class TopicCard extends React.Component {
               )
             }
             <div className={classes.excerpt}>
-              <Typography aria-multiline={true} component='p' color='inherit'>
+              <p>
                 {topic.exerpt}
-              </Typography>
+              </p>
             </div>
           </div>
-          <img
-            alt={topic.title}
-            className={classes.media}
-            src={topic.displayImage}
-            title={topic.title}
-          />
         </div>
       </div>
     );
