@@ -67,7 +67,7 @@ const topics = [
       'You will be able to find all of the topics above in a convenient slide show format.',
     displayImage: presentation,
     buttonText: 'View Slides',
-    href: 'https://frugal-aws.acari.io/presentation',
+    href: 'https://frugal-aws.unthrottled.io/presentation',
     viewComponent: (PayForProd),
     path: 'yeet',
   },

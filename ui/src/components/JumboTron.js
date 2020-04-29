@@ -35,7 +35,7 @@ const JumboTron = props => {
 
   return <React.Fragment>
     <div className={classes.mainFeaturedPost}>
-      <div className={"acari-heading"}>
+      <div className={"unthrottled-heading"}>
         <div className={classes.mainFeaturedPostContent}>
           <Typography align={'center'} component="h1" variant="h3" color="inherit" gutterBottom>
             The Frugal AWS Developer

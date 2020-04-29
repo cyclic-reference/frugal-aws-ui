@@ -59,7 +59,7 @@ const socialLinks = [
   },
   {
     title: "Alex's Home",
-    link: 'https://acari.io',
+    link: 'https://unthrottled.io',
     icon: (<Home/>),
   },
 ];
@@ -104,7 +104,7 @@ const Footer = props => {
         </div>
       </div>
       <div style={{textAlign: 'center'}}>
-        <a style={{textDecoration: 'none'}} href={'https://acari.io'} target={'_blank'}>
+        <a style={{textDecoration: 'none'}} href={'https://unthrottled.io'} target={'_blank'}>
           <ReactSVG svgStyle={{width: '100%', height: "100%"}}
                     src={Reach}/>
         </a>

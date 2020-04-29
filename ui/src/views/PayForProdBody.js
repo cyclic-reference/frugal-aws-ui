@@ -19,7 +19,7 @@ const markdown = `
 
 After a year you are looking at about $15 a month
 
-### For more information about the why the costs are the way they are, please see [Production Setup Page](https://frugal-aws.acari.io/go/to/production)
+### For more information about the why the costs are the way they are, please see [Production Setup Page](https://frugal-aws.unthrottled.io/go/to/production)
 
 `;
 
