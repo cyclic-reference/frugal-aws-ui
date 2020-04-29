@@ -6,7 +6,6 @@ import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
 import Menu from "@material-ui/icons/Menu";
 import withRouter from "react-router/es/withRouter";
 import IconButton from "@material-ui/core/IconButton";
@@ -20,6 +19,7 @@ const styles = theme => ({
   },
   fullList: {
     width: 'auto',
+    backgroundColor: '#565656'
   },
   menuButton: {
     color: theme.palette.grey[800],
@@ -95,11 +95,11 @@ class MenuNavigation extends React.Component {
   }
 
   getListItem(index, topic) {
-    return <ListItem button style={{backgroundColor: index % 2 === 0 ? '#f6f6f6' : 'white'}}>
+    return <ListItem button style={{backgroundColor: index % 2 === 0 ? '#565656' : '#666666'}}>
       <ListItemIcon><ReactSVG
         svgStyle={{width: '50px', height: '50px'}}
         src={topic.displayImage}/></ListItemIcon>
-      <ListItemText primary={topic.title}/>
+      <p style={{color: 'white'}}>{topic.title}</p>
     </ListItem>;
   }
 }

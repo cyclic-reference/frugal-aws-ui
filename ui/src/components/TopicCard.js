@@ -45,7 +45,6 @@ const styles = theme => ({
   },
   title: {
     color: '#e8ad4f',
-    textDecoration: 'underline',
   },
   content: {
     display: 'flex',
