@@ -6,7 +6,6 @@ import {createMuiTheme, MuiThemeProvider, withStyles} from '@material-ui/core/st
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import Footer from "./components/Footer";
 import AppBar from "@material-ui/core/es/AppBar/AppBar";
 import Topics from './Topics';
 import Landing from "./components/Landing";
@@ -32,6 +31,11 @@ const styles = theme => ({
   },
   toolbarMain: {
     borderBottom: `1px solid ${theme.palette.grey[300]}`,
+  },
+  topicDivider: {
+    opacity: 0.1,
+    color: '#262b30',
+    margin: '2rem',
   },
   header: {
     backgroundColor: '#f9a825',
@@ -124,7 +128,6 @@ const App = props => {
                 </div>
                 }/>
               </Switch>
-              <Footer/>
             </div>
           </ScrollToTop>
         </Router>

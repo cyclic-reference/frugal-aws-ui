@@ -9,7 +9,10 @@ import {Link} from "react-router-dom";
 const styles = theme => ({
   card: {},
   media: {
+    maxHeight: 150,
+    maxWidth: 150,
     minHeight: 150,
+    marginTop: '1rem',
     backgroundSize: 'contain',
   },
   cardContent: {
@@ -42,17 +45,14 @@ const styles = theme => ({
   },
   content: {
     display: 'flex',
-    maxHeight: 150,
-    maxWidth: 150,
+  },
+  excerpt:{
+    maxWidth: '350px',
   }
 });
 
 class TopicCard extends React.Component {
   state = {expanded: false};
-
-  handleExpandClick = () => {
-    this.setState(state => ({expanded: !state.expanded}));
-  };
 
   render() {
     const {classes, topic} = this.props;
@@ -75,13 +75,14 @@ class TopicCard extends React.Component {
                 </a>
               )
             }
-            <div>
+            <div className={classes.excerpt}>
               <Typography aria-multiline={true} component='p' color='inherit'>
                 {topic.exerpt}
               </Typography>
             </div>
           </div>
           <img
+            alt={topic.title}
             className={classes.media}
             src={topic.displayImage}
             title={topic.title}

@@ -1,6 +1,5 @@
 import React from 'react';
 import JumboTron from "./JumboTron";
-import Grid from "@material-ui/core/Grid";
 import ProjectCard from "./TopicCard";
 
 function Landing(props) {
@@ -9,13 +8,16 @@ function Landing(props) {
     <div className={classes.layout}>
       <main>
         <JumboTron/>
-        <Grid container spacing={40}>
-          {Topics.map(topic => (
-            <Grid item key={topic.title} xs={12} md={12}>
-              <ProjectCard topic={topic}/>
-            </Grid>
+        <div>
+          {Topics.map((topic, idx) => (
+            <div key={topic.title}>
+              <div>
+                <ProjectCard topic={topic}/>
+              </div>
+              {idx < Topics.length - 1 && <hr className={classes.topicDivider}/>}
+            </div>
           ))}
-        </Grid>
+        </div>
       </main>
     </div>
   );
