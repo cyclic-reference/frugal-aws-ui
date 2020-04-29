@@ -23,12 +23,7 @@ const options = {
         if (props.children && props.children.filter(child => child.indexOf && child.indexOf('~!@') > -1).length > 0) {
           return <span>{props.href.substring(0, props.href.length - 3)}</span>
         } else {
-          return <a {...props} target={"_blank"}>
-            <Button variant={"outlined"}
-                    size='medium'
-                    color='default'>
-              {props.children}
-            </Button></a>;
+          return <a {...props} target={'_blank'} style={{color: '#e8ad4f'}}>{props.children}</a>
         }
       },
     },
