@@ -25,12 +25,12 @@ This means that the issued certificates have not expired and were issued by a tr
 
 Here is an example of what a good HTTPS connection looks like:
  
-![Secure Site](https://raw.githubusercontent.com/cyclic-reference/frugal-aws-ui/master/presentation/images/secure_site.png)
+![Secure Site](https://raw.githubusercontent.com/Unthrottled/frugal-aws-ui/master/presentation/images/secure_site.png)
 
 This is an example of what invalid certificate do to a website:
 
 
-![Insecure Site](https://raw.githubusercontent.com/cyclic-reference/frugal-aws-ui/master/presentation/images/bad-https.png)
+![Insecure Site](https://raw.githubusercontent.com/Unthrottled/frugal-aws-ui/master/presentation/images/bad-https.png)
 
 In addition to having HTTPS, it also is great if any HTTP communication be automatically redirected to the respective HTTPS communication.
 
@@ -58,15 +58,15 @@ When things do not work as expected, inform the user that such a thing has happe
 
 However, no person has probably ever said, "I like it when I see this, it makes me feel good." when they see this.
 
-![404](https://raw.githubusercontent.com/cyclic-reference/frugal-aws-ui/master/presentation/images/404_lame.png)
+![404](https://raw.githubusercontent.com/Unthrottled/frugal-aws-ui/master/presentation/images/404_lame.png)
 
 Make error handling fun and informative
 
-![404_fun](https://raw.githubusercontent.com/cyclic-reference/frugal-aws-ui/master/presentation/images/404.png)
+![404_fun](https://raw.githubusercontent.com/Unthrottled/frugal-aws-ui/master/presentation/images/404.png)
 
 Make sure that if your system has to go down for maintenance, make sure that window of time is handled as well. 
 
-![404](https://raw.githubusercontent.com/cyclic-reference/frugal-aws-ui/master/presentation/images/github-maintenance.png)
+![404](https://raw.githubusercontent.com/Unthrottled/frugal-aws-ui/master/presentation/images/github-maintenance.png)
 
 ---
 

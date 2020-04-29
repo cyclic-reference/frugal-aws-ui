@@ -95,11 +95,11 @@ You can find all of the necessary resources to set up CloudFront and HTTPS in th
 
 ## Diagram of the Cost Optimized AWS Architecture 
 
-![Cloud Architecture](https://raw.githubusercontent.com/cyclic-reference/frugal-aws-ui/master/presentation/images/AWS_ARCH.png)
+![Cloud Architecture](https://raw.githubusercontent.com/Unthrottled/frugal-aws-ui/master/presentation/images/AWS_ARCH.png)
 
 An example implementation of the schema can be found here:
 
-## [https://github.com/cyclic-reference/acari-api](https://github.com/cyclic-reference/acari-api)
+## [https://github.com/Unthrottled/acari-api](https://github.com/Unthrottled/acari-api)
 
 `;
 

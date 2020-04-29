@@ -49,12 +49,12 @@ const styles = theme => ({
 const socialLinks = [
   {
     title: "Frugal AWS Dev's Source Code",
-    link: 'https://github.com/cyclic-reference/frugal-aws-ui',
+    link: 'https://github.com/Unthrottled/frugal-aws-ui',
     icon: (<Code/>),
   },
   {
     title: "Alex's GitHub Profile",
-    link: 'https://github.com/cyclic-reference',
+    link: 'https://github.com/Unthrottled',
     icon: (<GitHub/>),
   },
   {

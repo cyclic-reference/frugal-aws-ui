@@ -1,5 +1,5 @@
 .backdrop {
-  background: url('images/stripe.png') fixed, linear-gradient(#3e3e3e, #3e3e3e, #f9a825);
+  background: linear-gradient(#3e3e3e, #3e3e3e, #f9a825);
 }
 
 #root, html, body{
@@ -17,9 +17,6 @@ hr {
 }
 
 .acari-heading {
-  background: url(images/hex.png), url(images/hex-right.png) !important;
-  background-position: top left, top right !important;
-  background-repeat: repeat-y, repeat-y !important;
 }
 
 a {

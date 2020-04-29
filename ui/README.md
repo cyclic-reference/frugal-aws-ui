@@ -66,4 +66,4 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-![End](https://raw.githubusercontent.com/cyclic-reference/acari-landing/master/images/end.jpg)
+![End](https://raw.githubusercontent.com/Unthrottled/acari-landing/master/images/end.jpg)
