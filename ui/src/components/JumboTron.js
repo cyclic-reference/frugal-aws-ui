@@ -16,7 +16,6 @@ const styles = theme => ({
     marginBottom: '0.5em'
   },
   mainFeaturedPost: {
-    backgroundColor: theme.palette.grey[800],
     color: theme.palette.common.white,
     marginBottom: theme.spacing.unit * 4,
   },
@@ -35,7 +34,7 @@ const JumboTron = props => {
   const {classes} = props;
 
   return <React.Fragment>
-    <Paper className={classes.mainFeaturedPost}>
+    <div className={classes.mainFeaturedPost}>
       <div className={"acari-heading"}>
         <div className={classes.mainFeaturedPostContent}>
           <Typography align={'center'} component="h1" variant="h3" color="inherit" gutterBottom>
@@ -46,7 +45,7 @@ const JumboTron = props => {
           </Typography>
         </div>
       </div>
-    </Paper>
+    </div>
   </React.Fragment>;
 };
 

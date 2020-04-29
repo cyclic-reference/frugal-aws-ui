@@ -13,6 +13,7 @@ import MenuNavigation from "./components/MenuNavigation";
 import Shrug from './images/shrug_shadow.png';
 import yellow from "@material-ui/core/es/colors/yellow";
 import ScrollToTop from "./components/ScrollToTheTop";
+import Background from "./components/Background";
 
 const styles = theme => ({
   layout: {
@@ -39,7 +40,6 @@ const styles = theme => ({
   },
   header: {
     backgroundColor: '#f9a825',
-    marginBottom: '1em',
   },
   toolbarTitle: {
     color: theme.palette.grey[800],
@@ -104,6 +104,7 @@ const App = props => {
                   </Typography>
                 </Toolbar>
               </AppBar>
+              <Background/>
               <Switch>
                 <Route path={'/'} exact component={() => <Landing classes={classes} Topics={Topics}/>}/>
                 {Topics
