@@ -2,7 +2,6 @@ import React from 'react';
 import ReactMarkdown from 'markdown-to-jsx';
 import {withStyles} from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import Button from "@material-ui/core/es/Button";
 
 const styles = theme => ({
   listItem: {
@@ -28,7 +27,7 @@ const options = {
       },
     },
     img: {
-      component: props => <div className="image-container"><img {...props}/></div>,
+      component: props => <div className="image-container"><img alt={props.alt} {...props}/></div>,
       props: {
         style: {
           borderWidth: '4px',
