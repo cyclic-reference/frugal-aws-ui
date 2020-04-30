@@ -2,8 +2,6 @@ import Typography from "@material-ui/core/es/Typography/Typography";
 import React from "react";
 import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
-import Paper from "@material-ui/core/Paper";
-import Grid from "@material-ui/core/Grid";
 
 const styles = theme => ({
   principles: {
@@ -17,7 +15,6 @@ const styles = theme => ({
     marginBottom: '0.5em'
   },
   mainFeaturedPost: {
-    backgroundColor: theme.palette.grey[800],
     color: theme.palette.common.white,
     marginBottom: theme.spacing.unit * 4,
   },
@@ -36,22 +33,18 @@ const JumboTron = props => {
   const {classes} = props;
 
   return <React.Fragment>
-    <Paper className={classes.mainFeaturedPost}>
-      <div className={"acari-heading"}>
-        <Grid container>
-          <Grid item md={6}>
-            <div className={classes.mainFeaturedPostContent}>
-              <Typography component="h1" variant="h3" color="inherit" gutterBottom>
-                The Frugal AWS Developer
-              </Typography>
-              <Typography variant="h5" color="inherit" paragraph>
-                How to go to production on a budget
-              </Typography>
-            </div>
-          </Grid>
-        </Grid>
+    <div className={classes.mainFeaturedPost}>
+      <div className={"unthrottled-heading"}>
+        <div className={classes.mainFeaturedPostContent}>
+          <Typography align={'center'} component="h1" variant="h3" color="inherit" gutterBottom>
+            The Frugal AWS Developer
+          </Typography>
+          <Typography align={'center'} variant="h5" color="inherit" paragraph>
+            How to go to production on a budget.
+          </Typography>
+        </div>
       </div>
-    </Paper>
+    </div>
   </React.Fragment>;
 };
 

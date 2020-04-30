@@ -12,7 +12,7 @@ import PayForProd from "./views/PayForProd";
 
 const topics = [
   {
-    title: 'What is Production?',
+    title: 'What is production?',
     exerpt: 'This section will explain the positive traits that are exhibited by well established production environments.',
     displayImage: Question,
     path: '/what/is/production',
@@ -42,7 +42,7 @@ const topics = [
     nextPage: '/go/to/production',
   },
   {
-    title: 'How Do I go to Production?',
+    title: 'How do I go to production?',
     exerpt:
       'The fundamental concepts that helped us develop locally can also be applied to most of our production, thanks to good strategy. ' +
       'Here we will learn how to get our production into AWS while drawing on our past knowledge to guide us along on the journey.',
@@ -53,7 +53,7 @@ const topics = [
     nextPage: '/dolla/dolla/bill/yall',
   },
   {
-    title: 'How much is Production?',
+    title: 'How much is production?',
     exerpt: 'Money talks, the previous section discussed where we can optimize our costs when supporting a production environment. ' +
       'Here we recap how much costs can be expected to maintaining our production environment.',
     displayImage: dogecoin,
@@ -67,7 +67,7 @@ const topics = [
       'You will be able to find all of the topics above in a convenient slide show format.',
     displayImage: presentation,
     buttonText: 'View Slides',
-    href: 'https://frugal-aws.acari.io/presentation',
+    href: 'https://frugal-aws.unthrottled.io/presentation',
     viewComponent: (PayForProd),
     path: 'yeet',
   },

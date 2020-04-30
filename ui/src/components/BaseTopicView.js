@@ -2,8 +2,6 @@ import React from 'react';
 import {withStyles} from '@material-ui/core/styles';
 import withRouter from "react-router/es/withRouter";
 import Link from "react-router-dom/es/Link";
-import Fab from "@material-ui/core/es/Fab";
-import {Home} from "@material-ui/icons";
 import Button from "@material-ui/core/es/Button";
 
 const styles = theme => ({
@@ -12,17 +10,14 @@ const styles = theme => ({
   },
   fab: {
     position: 'fixed',
-    bottom: theme.spacing.unit * 2,
-    right: theme.spacing.unit * 2,
+    top: theme.spacing.unit * 2,
+    left: theme.spacing.unit * 2,
   },
-  postContainer: {
-    color: theme.palette.grey[800]
-  },
+  postContainer: {},
   layout: {
-    backgroundColor: '#e6e6e6',
     padding: '1.5em',
     borderRadius: '0.5em',
-    boxShadow: '0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);',
+    color: '#fff'
   }
 });
 
@@ -30,18 +25,9 @@ const styles = theme => ({
 function BaseTopicView({children, classes, topic}) {
   return (
     <div className={classes.layout}>
-      <Link to={'/'} style={{textDecoration: 'none'}}>
-        <Button variant={"contained"}
-                size='medium'
-                color='primary'>
-          Go Home
-        </Button>
-      </Link>
-      <hr style={{marginBottom: 0}}/>
       <div className={classes.postContainer}>
         {children}
       </div>
-      <hr/>
       <div style={{display: 'flex'}}>
         {
           topic.previousPage ?
@@ -61,11 +47,6 @@ function BaseTopicView({children, classes, topic}) {
             null
         }
       </div>
-      <Link to={'/'} style={{textDecoration: 'none'}}>
-        <Fab color={'primary'} classes={'primary'} className={classes.fab} title={'Frugal AWS Dev Home'}>
-          <Home/>
-        </Fab>
-      </Link>
     </div>
   );
 }

@@ -2,7 +2,6 @@ import React from 'react';
 import ReactMarkdown from 'markdown-to-jsx';
 import {withStyles} from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import Button from "@material-ui/core/es/Button";
 
 const styles = theme => ({
   listItem: {
@@ -23,17 +22,12 @@ const options = {
         if (props.children && props.children.filter(child => child.indexOf && child.indexOf('~!@') > -1).length > 0) {
           return <span>{props.href.substring(0, props.href.length - 3)}</span>
         } else {
-          return <a {...props} target={"_blank"}>
-            <Button variant={"outlined"}
-                    size='medium'
-                    color='default'>
-              {props.children}
-            </Button></a>;
+          return <a {...props} target={'_blank'} style={{color: '#e8ad4f'}}>{props.children}</a>
         }
       },
     },
     img: {
-      component: props => <div className="image-container"><img {...props}/></div>,
+      component: props => <div className="image-container"><img alt={props.alt} {...props}/></div>,
       props: {
         style: {
           borderWidth: '4px',

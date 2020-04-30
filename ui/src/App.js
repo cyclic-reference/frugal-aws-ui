@@ -6,7 +6,6 @@ import {createMuiTheme, MuiThemeProvider, withStyles} from '@material-ui/core/st
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import Footer from "./components/Footer";
 import AppBar from "@material-ui/core/es/AppBar/AppBar";
 import Topics from './Topics';
 import Landing from "./components/Landing";
@@ -14,6 +13,7 @@ import MenuNavigation from "./components/MenuNavigation";
 import Shrug from './images/shrug_shadow.png';
 import yellow from "@material-ui/core/es/colors/yellow";
 import ScrollToTop from "./components/ScrollToTheTop";
+import Background from "./components/Background";
 
 const styles = theme => ({
   layout: {
@@ -33,9 +33,14 @@ const styles = theme => ({
   toolbarMain: {
     borderBottom: `1px solid ${theme.palette.grey[300]}`,
   },
+  topicDivider: {
+    opacity: 0.1,
+    color: '#262b30',
+    maxWidth: '15rem',
+    margin: '4rem auto',
+  },
   header: {
     backgroundColor: '#f9a825',
-    marginBottom: '1em',
   },
   toolbarTitle: {
     color: theme.palette.grey[800],
@@ -100,6 +105,7 @@ const App = props => {
                   </Typography>
                 </Toolbar>
               </AppBar>
+              <Background/>
               <Switch>
                 <Route path={'/'} exact component={() => <Landing classes={classes} Topics={Topics}/>}/>
                 {Topics
@@ -124,7 +130,6 @@ const App = props => {
                 </div>
                 }/>
               </Switch>
-              <Footer/>
             </div>
           </ScrollToTop>
         </Router>

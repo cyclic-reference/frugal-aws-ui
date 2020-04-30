@@ -25,12 +25,12 @@ This means that the issued certificates have not expired and were issued by a tr
 
 Here is an example of what a good HTTPS connection looks like:
  
-![Secure Site](https://raw.githubusercontent.com/cyclic-reference/frugal-aws-ui/master/presentation/images/secure_site.png)
+![Secure Site](https://raw.githubusercontent.com/Unthrottled/frugal-aws-ui/master/presentation/images/secure_site.png)
 
 This is an example of what invalid certificate do to a website:
 
 
-![Insecure Site](https://raw.githubusercontent.com/cyclic-reference/frugal-aws-ui/master/presentation/images/bad-https.png)
+![Insecure Site](https://raw.githubusercontent.com/Unthrottled/frugal-aws-ui/master/presentation/images/bad-https.png)
 
 In addition to having HTTPS, it also is great if any HTTP communication be automatically redirected to the respective HTTPS communication.
 
@@ -46,7 +46,7 @@ Users should expect to be able to visit the main domain **google.com** and also 
 
 I have great confidence that you have never had to do the above. 
 Then why is it you always see things like these: **localhost:3000** or **localhost:8080**, when developing locally??
-That will be covered that [in this section](https://frugal-aws.acari.io/develop/local).
+That will be covered that [in this section](https://frugal-aws.unthrottled.io/develop/local).
  
 If you already have this down, good for you! However still be sure to check it out.
 
@@ -58,15 +58,15 @@ When things do not work as expected, inform the user that such a thing has happe
 
 However, no person has probably ever said, "I like it when I see this, it makes me feel good." when they see this.
 
-![404](https://raw.githubusercontent.com/cyclic-reference/frugal-aws-ui/master/presentation/images/404_lame.png)
+![404](https://raw.githubusercontent.com/Unthrottled/frugal-aws-ui/master/presentation/images/404_lame.png)
 
 Make error handling fun and informative
 
-![404_fun](https://raw.githubusercontent.com/cyclic-reference/frugal-aws-ui/master/presentation/images/404.png)
+![404_fun](https://raw.githubusercontent.com/Unthrottled/frugal-aws-ui/master/presentation/images/404.png)
 
 Make sure that if your system has to go down for maintenance, make sure that window of time is handled as well. 
 
-![404](https://raw.githubusercontent.com/cyclic-reference/frugal-aws-ui/master/presentation/images/github-maintenance.png)
+![404](https://raw.githubusercontent.com/Unthrottled/frugal-aws-ui/master/presentation/images/github-maintenance.png)
 
 ---
 
@@ -85,7 +85,7 @@ Whether the system fails or succeeds, do not make the user wait to find out.
 
 If I were to put a url into the browser address then, I expect to take me to the content that I was viewing at the time.
 
-For example, if I put [https://learn.acari.io/reactive/explanations/why](https://learn.acari.io/reactive/explanations/why) 
+For example, if I put [https://learn-functional.unthrottled.io/reactive/explanations/why](https://learn-functional.unthrottled.io/reactive/explanations/why) 
 into my browser address, it better take me to the page that I was viewing when I copied that url. 
 
 `;

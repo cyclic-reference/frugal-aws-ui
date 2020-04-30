@@ -56,11 +56,11 @@ The NGINX server will access the spring boot server via the Docker supplied host
 
 ## Diagram of the Cost Optimized Local Architecture
 
-![Local Architecture](https://raw.githubusercontent.com/cyclic-reference/frugal-aws-ui/master/presentation/images/LOCAL_ARCH.png)
+![Local Architecture](https://raw.githubusercontent.com/Unthrottled/frugal-aws-ui/master/presentation/images/LOCAL_ARCH.png)
 
 An example implementation of the schema can be found here:
 
-## [https://github.com/cyclic-reference/frugal-aws](https://github.com/cyclic-reference/frugal-aws) 
+## [https://github.com/Unthrottled/frugal-aws](https://github.com/Unthrottled/frugal-aws) 
 
 `;
 

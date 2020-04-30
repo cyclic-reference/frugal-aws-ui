@@ -1,29 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardMedia from '@material-ui/core/CardMedia';
-import CardContent from '@material-ui/core/CardContent';
-import CardActions from '@material-ui/core/CardActions';
 import Typography from '@material-ui/core/Typography';
-import GridList from '@material-ui/core/es/GridList/GridList';
-import Button from '@material-ui/core/es/Button/Button';
-import HexBottom from '../images/hex-bottom.png';
 import withRouter from "react-router/es/withRouter";
 import {Link} from "react-router-dom";
-import yellow from "@material-ui/core/colors/yellow";
 
 
 const styles = theme => ({
-  card: {
-    backgroundColor: '#e6e6e6',
-    color: theme.palette.grey[800],
-    backgroundImage: `url(${HexBottom})`,
-    backgroundPosition: 'left bottom',
-    backgroundRepeat: 'repeat-x',
-  },
+  card: {},
   media: {
-    minHeight: 150,
+    width: 150,
+    height: 150,
+    marginTop: '1rem',
     backgroundSize: 'contain',
   },
   cardContent: {
@@ -43,6 +31,11 @@ const styles = theme => ({
       marginRight: -8,
     },
   },
+  mediaContainer: {
+    width: 150,
+    height: 150,
+    marginRight: '2rem'
+  },
   expandOpen: {
     transform: 'rotate(180deg)',
   },
@@ -50,59 +43,61 @@ const styles = theme => ({
     width: 80,
     height: 80,
   },
+  title: {
+    color: '#e8ad4f',
+  },
+  content: {
+    display: 'flex',
+  },
+  excerpt:{
+    maxWidth: '500px',
+    color: '#b2b2b4',
+    fontSize: '20px',
+    lineHeight: '2rem',
+    fontWeight: 400,
+  }
 });
 
 class TopicCard extends React.Component {
   state = {expanded: false};
 
-  handleExpandClick = () => {
-    this.setState(state => ({expanded: !state.expanded}));
-  };
-
   render() {
     const {classes, topic} = this.props;
     return (
-      <Card className={classes.card}>
-        <CardContent>
-          <Typography gutterBottom variant='h4' color='inherit' component='h2'>
-            {topic.title}
-          </Typography>
-          <GridList cellHeight={'auto'}>
-            <div>
-              <Typography aria-multiline={true} component='p' color='inherit'>
-                {topic.exerpt}
-              </Typography>
-            </div>
-            <CardMedia
+      <div className={classes.card}>
+        <div className={classes.content}>
+          <div className={classes.mediaContainer}>
+            <img
+              alt={topic.title}
               className={classes.media}
-              image={topic.displayImage}
+              src={topic.displayImage}
               title={topic.title}
             />
-          </GridList>
-        </CardContent>
-        <CardActions className={classes.actions} disableActionSpacing>
-          {
-            topic.path && topic.path !== 'yeet' ? (<Link to={topic.path} style={{textDecoration: 'none'}}>
-              <Button variant={"contained"}
-                      size='medium'
-                      color='primary'>
-                Read More
-              </Button>
-            </Link>) : (
-              <a href={topic.href}
-                 target={'_blank'}
-                 style={{textDecoration: 'none'}}>
-                <Button variant={"contained"}
-                        size='medium'
-                        color='primary'>
-                  {topic.buttonText ? topic.buttonText: 'Read More'}
-                </Button>
-              </a>
-            )
-          }
-
-        </CardActions>
-      </Card>
+          </div>
+          <div>
+            {
+              topic.path ? (<Link to={topic.path} style={{textDecoration: 'none'}}>
+                <Typography className={classes.title} gutterBottom variant='h4' color='inherit' component='h2'>
+                  {topic.title}
+                </Typography>
+              </Link>) : (
+                <a href={topic.href}
+                   target={'_blank'}
+                   style={{textDecoration: 'none'}}>
+                  <Typography className={classes.title} gutterBottom variant='h4' color='inherit' component='h2'>
+                    {topic.title}
+                  </Typography>
+                </a>
+              )
+            }
+            <div className={classes.excerpt}>
+              <p>
+                {topic.exerpt}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     );
   }
 }
