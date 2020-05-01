@@ -22,7 +22,7 @@ const topics = [
   {
     title: 'Where do I start?',
     exerpt:
-      'Now that a you have a fundamental understanding of what a "good" production environment looks like. ' +
+      'Now that a you have a fundamental understanding of what a good production environment looks like. ' +
       'The next step in your journey is laying out a cost optimized strategy.',
     displayImage: GreenLight,
     path: '/how/to/start',
